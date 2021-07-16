@@ -15,12 +15,18 @@
   <link rel="stylesheet" href="nav-buet.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Poppins', sans-serif;}
 
 body, html {
   height: 100%;
   line-height: 1.8;
+  scroll-behavior: smooth;
 }
 
 /* Full height image header */
@@ -264,6 +270,30 @@ a:hover.a, a:active.a {
 .btn:hover {
   background-color: red;
 }
+
+a{
+   text-decoration:none;
+}
+
+#myBtns {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #990000;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtns:hover {
+  background-color: red;
+}
   
 </style>
 </head>
@@ -333,9 +363,9 @@ a:hover.a, a:active.a {
 </div><br><hr style="">
         <div class="w3-container">
           <center><b><font color="#990000"><h4>Bangladesh University of Engineering & Technology (BUET)</h4></font></center>
-          <p><a href="pdf/buet admission circular 2020-2021.pdf" target="_blank"<button class="w3-button w3-light-grey w3-block">Click Here For Circular Download</button></p></a>
-		  <p><a href="http://uga1.buet.ac.bd/UGA/blankFormAction.do" target="_blank" <button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
-		  <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
+          <p><a href="pdf/buet admission circular 2020-2021.pdf" target="_blank"><button class="w3-button w3-light-grey w3-block cir">Click Here For Circular Download</button></p></a>
+		  <p><a href="http://uga1.buet.ac.bd/UGA/blankFormAction.do" target="_blank"><button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
+		  <p><a href="soon.html"><button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
         </div>
       </div>
     </div>
@@ -1158,16 +1188,16 @@ a:hover.a, a:active.a {
 <h4><b>
 <p><font color ="#FF0000"> 
    <div class="tab">
-  <p><button class="tablinks" onclick="openinfo(event, 'Module A')"><font color = "#990000">Previous Question Paper (2019 - 2020): Module A </font></button></p></div>
+  <p><button class="tablinks" onclick="openinfo(event, 'Module A')"><font color="#99000">Previous Question Paper (2019 - 2020): Module A </font></button></p></div>
  <div class="tab">
-  <button class="tablinks" onclick="openinfo(event, 'Module B')"><font color = "#990000">Previous Question Paper (2019 - 2020): Module B </font></button></div>
+  <button class="tablinks" onclick="openinfo(event, 'Module B')"><font color="#990000">Previous Question Paper (2019 - 2020): Module B </font></button></div>
   <div class="tab">
-  <p><button class="tablinks" onclick="openinfo(event, 'Module C')"><font color = "#990000">Module B Sample Questions: Visual and Spatial Intelligence</font></button></div></p>
+  <p><button class="tablinks" onclick="openinfo(event, 'Module C')"><font color="#990000">Module B Sample Questions: Visual and Spatial Intelligence</font></button></div></p>
   <div class="tab">
- <p> <button class="tablinks" onclick="openinfo(event, 'Module D')"><font color = "#990000">Module B Sample Answers: Visual and Spatial Intelligence</font></button></div></p>
+ <p> <button class="tablinks" onclick="openinfo(event, 'Module D')"><font color="#990000">Module B Sample Answers: Visual and Spatial Intelligence</font></button></div></p>
   <div class="tab">
-  <p><button class="tablinks" onclick="openinfo(event, 'Circulars')"><font color = "#990000"> BUET Admission Circular 2020 - 2021 </font></button></p></div>
-</font></p>
+  <p><button class="tablinks" onclick="openinfo(event, 'Circulars')"><font color="#990000">BUET Admission Circular 2020 - 2021 </font></button></p></div>
+</p></font>
 </b></h4>
 </center>
 </p>
@@ -1356,7 +1386,7 @@ a:hover.a, a:active.a {
     <a href="https://twitter.com/bdvarsity_info" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
      <a href="https://www.linkedin.com/company/bdvarsity-info" target ="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
    </div>
-   <p><h4><a href="about.html">About </a></p><a href="privacy-policy.html"> Privacy Policy</a></p>
+   <p><h4><a href="about.html" style="text-decoration:none;">About </a></p><a href="privacy-policy.html" style="text-decoration:none;"> Privacy Policy</a></p>
    Copyright © 2020 bdvarsity | All Rights Reserved </h4>
 </footer>
 
@@ -1481,6 +1511,30 @@ function openinfo(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+</script>
+
+<i class="fa fa-arrow-up w3-margin-right" onclick="topFunction()" id="myBtns" title="Go to top"></i>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtns");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 </script>
 

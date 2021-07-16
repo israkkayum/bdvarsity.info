@@ -11,82 +11,38 @@
   <meta name="description" content="DU Admission Information 2020 - 2021,DU admission circular, online application form and result">
   <meta name="keywords" content="news,circular,result,du online application,du admission information 2020-2021">
   <meta name="author" content="Israk Kayum">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="w3.css">
+ <link rel="stylesheet" href="nav-buet.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
+    body,h1,h2,h3,h4,h5,h6 {
+      font-family: 'Poppins', sans-serif;
+    }
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/w3images/mac.jpg");
-  min-height: 100%;
-}
-
+    body,html {
+      height: 100%;
+      line-height: 1.8;
+      scroll-behavior: smooth;
+    }
+	
 .w3-bar .w3-button {
   padding: 16px;
 }
 
-.button {
-  background-color: #004A7F;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Arial;
-  font-size: 20px;
-  padding: 10px 15px;
-  margin: 10px !important;
-  text-align: center;
-  text-decoration: none;
-  -webkit-animation: glowing 1500ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
-}
-.button:hover { color: yellow; }
-@-webkit-keyframes glowing {
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
-}
-
-@-moz-keyframes glowing {
-  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
-}
-
-@-o-keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-}
-
-@keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-}
 
 	table.a {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: auto;
   line-height: 1.8
 }
 	table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   line-height: 1.8
@@ -104,15 +60,19 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+    tr:nth-child(even).a {
+      background-color: #FFFFFF;
+    }
+
 .pad {
 margin: 5;
 padding: 30;
-background-color: 	#F5F5F5;
+background-color: #F5F5F5;
 padding-top: 10px;
 padding-bottom: auto;
 }
 
-li {
+li.e {
   float: left;
   margin: 5 20px;
 }
@@ -122,29 +82,6 @@ ul {
 }
 li.a{
      float: none;
-}
-
-
-.button1 {
-  padding: 10px 15px;
-  font-size: 16px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  margin: 10px;
-}
-
-.button1:hover {background-color: #3e8e41}
-
-.button1:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }
 
 
@@ -288,6 +225,136 @@ li.a{
   transition: max-height 0.2s ease-out;
 }
 
+.button1 {
+  padding: 10px 15px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin: 10px;
+}
+
+.button1:hover {background-color: #3e8e41}
+
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+ * {
+      box-sizing: border-box;
+    }
+
+
+    /* Float four columns side by side */
+    .column-notice {
+      width: 100%;
+      padding: 5px 10px;
+    }
+
+    /* Remove extra left and right margins, due to padding */
+    .row-notice {
+      margin: 0 -5px;
+    }
+
+    /* Clear floats after the columns */
+    .row-notice:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .column-notice {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+
+    /* Style the counter cards */
+    .card-notice {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 10px 20px;
+      background-color: #FFFFFF;
+    }
+
+    .btn {
+      background-color: #990000;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 15px;
+      float: right;
+      margin: 5px;
+
+    }
+
+    /* Darker background on mouse-over */
+    .btn:hover {
+      background-color: red;
+    }
+	
+	 .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+
+.notice-result{
+      background-color: yellow;
+	  border-radius: 10px;
+	  padding-left: 5px;
+	  padding-right: 5px;
+}
+.scroll-box{
+      height: 450px;
+	  overflow-y: scroll;
+	  overflow-x: hidden;
+}
+
+ #myBtns {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #990000;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtns:hover {
+      background-color: red;
+    }
 
 </style>
 </head>
@@ -297,60 +364,58 @@ li.a{
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="hKdaN9td"></script>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img border="0" alt src="OIP.png" width="40" height="40"></a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-	  <a href="index.html" class="w3-bar-item w3-button"><b><font color="#990000">Home</a>
-      <a href="#team" class="w3-bar-item w3-button"><b><font color="#990000">Universites</a>
-      <a href="mc.html" class="w3-bar-item w3-button">Medical/Dental College</a>
-      <a href="afmc.html" class="w3-bar-item w3-button">Military Medical college</a>
-      <a href="army.html" class="w3-bar-item w3-button">Join Army</a>
-      <a href="navy.html" class="w3-bar-item w3-button">Join Navy</a>
-       <a href="airforce.html" class="w3-bar-item w3-button">Join Air Force</a>
-       <a class="button" href="http://whatwhyhow.ml/">Educative Blog</font></b></a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-     <h3> <i class="fa fa-bars"></i> </h3>
-    </a>
+<div id="wrap">
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img border="" alt src="OIP.png" width="50" height="50"></a>
+      </div>
+      <button type="button" class="btn-hamburger" data-action="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" class="btn-hamburger">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="#Crn" id="crn">Circular / Result / Notice</a></li>
+        <li class="nav-item"><a href="#Sch" id="sch">Schedule</a></li>
+		<li class="nav-item"><a href="#Hta" id="hta">How To Apply</a></li>
+        <li class="nav-item"><a href="#Req" id="req">Requirement</a></li>
+        <li class="nav-item"><a href="#Syl" id="syl">Syllabus / Number Format</a></li>
+        <li class="nav-item"><a href="#Sn" id="sn">Seats Number</a></li>
+      </ul>
+    </nav>
   </div>
-</div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16"><b><font color="#990000">Close ×</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Universites</a>
-  <a href="mc.html" onclick="w3_close()" class="w3-bar-item w3-button">Medical/Dental college</a>
-  <a href="afmc.html" onclick="w3_close()" class="w3-bar-item w3-button">Military Medical College</a>
-  <a href="army.html" onclick="w3_close()" class="w3-bar-item w3-button">Join Army</a>
-  <a href="navy.html" onclick="w3_close()" class="w3-bar-item w3-button">Join Navy</a>
-  <a href="airforce.html" onclick="w3_close()" class="w3-bar-item w3-button">Join Air Force</a>
-  <a class="button" href="http://whatwhyhow.ml/">Educative Blog</a></b></font></a>
-</nav>
-</b></font>
 <!-- Image of location/map -->
-    <img src="https://bangladeshus.com/wp-content/uploads/2016/12/dhaka-university.jpg" class="w3-image w3-" style="width:100%;margin-top:0px">
+    <img src="https://bangladeshus.com/wp-content/uploads/2016/12/dhaka-university.jpg" class="w3-image w3-" style="width:100%;margin-top:0px" id="home">
+	
+	
+	  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>
+      <center>Last Update Date: 19/06/2021</center>
+    </strong>
   </div>
-</div>
 
 <p>
 <center>
 
-<button class="button1" class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Undergraduate</button>
-<button class="button1" class="tablinks" onclick="openCity(event, 'Paris')">MPhil</button>
-<button class="button1" class="tablinks" onclick="openCity(event, 'Tokyo')">PhD</button>
-<button class="button1" class="tablinks" onclick="openCity(event, 'ctg')">International Students</button><hr style="">
+<a href="du-ug.html"><button class="button1">Undergraduate</button></a>
+<a href=""><button class="button1">MPhil</button></a>
+<a href=""><button class="button1">PhD</button></a>
+<a href=""><button class="button1">International Students</button></a>
+<a href=""><button class="button1">Seven Collages</button></a>
+
+<hr style="">
 
 </center></p>
 
-<div id="London" class="tabcontent">
 
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h1 class="w3-center"><b><font color="#990000">DU Admission Information 2020 - 2021 (Undergraduate)</font></b></h1><hr style="">
+<div class="w3-container" style="padding:100px 16px" id="Crn">
+  <h1 class="w3-center"><b><font color="#990000">DU Admission Information 2020 - 2021 (Undergrad)</font></b></h1><hr style="">
   <div class="w3-row-padding w3-" style="margin-top:64px;">
   
   <div class="w3-col l3 m6 w3-margin-bottom">
@@ -360,60 +425,52 @@ li.a{
 </div><br><hr style="">
         <div class="w3-container">
           <center><b><font color="#990000"><h4>University<br> of<br> Dhaka (DU)</h4></font></center>
-          <p><a href="pdf/du_Admission_Test_2020-2021.pdf"<button class="w3-button w3-light-grey w3-block">Click Here For Circular Download</button></p></a>
-		  <p><a href="https://admission.eis.du.ac.bd/"<button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
-		  <p><a href=""<button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
+          <p><a href="pdf/du_Admission_Test_2020-2021.pdf" target="_blank"><button class="w3-button w3-light-grey w3-block cir">Click Here For Circular Download</button></p></a>
+		  <p><a href="https://admission.eis.du.ac.bd/" target="_blank"><button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
+		  <p><a href="" target="_blank"><button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
         </div>
       </div>
     </div>
 	
-		<center> <b> <h2><font color="#990000"> News / Notices</font> </h2></b></center>
-		
-		
-	<center>
-	<p>
-<table class ="a">
-  <tr>
-    <th>Course Name/Category</th>
-    <th>Apply Deadline</th>
-  </tr>
-  <tr>
-    <td><b><font color="#0000FF">All Unit (A,B,C,D,E)</font></b></td>
-    <td><b><font color="#008000">Starts: 08 March 2021 (4:00 PM)</font></b><br>
-        <p><b><font color="#FF0000">Ends: 31 March 2021 (11:59 PM)</font></b><br></p>
-		<p><b><font color="#FF0000">Ends (Fees): 01 April 2021 (11:59 PM)</font></b></td></p>
-</table>
-	</p>
-	</center><p>
-	<center>
-	<p>
-<table class = "a">
-  <tr>
-    <th>Units Name</th>
-    <th>Exam</th>
-	<th> Notices </th>
-  </tr>
-  <tr>
-    <td><b><font color="#0000FF">A / KA</font></b></td>
-    <td><b><font color="#008000">Starts: 06 August 2021 (11:00 AM - 12:30 PM)</font></b>
-	<td><b><font color="#FF0000"><a href = "pdf/DU_A_unit.pdf">Click Here<img src="blinkingNEW.gif" width="30" height="12" <="" a=""></a></font></b><br></tr><tr>
-     <td><b><font color="#0000FF">B / KHA</font></b></td>
-    <td><b><font color="#008000">Starts: 07 August 2021 (11:00 AM - 12:30 PM)</font></b>
-	<td><b><font color="#FF0000"><a href = "pdf/DU_B_unit.pdf">Click Here<img src="blinkingNEW.gif" width="30" height="12" <="" a=""></a></font></b><br> </tr><tr>  
-	<td><b><font color="#0000FF">C / GA</font></b></td>
-    <td><b><font color="#008000">Starts: 13 August 2021 (11:00 AM - 12:30 PM)</font></b>
-	<td><b><font color="#FF0000"><a href = "pdf/DU_C_unit.pdf">Click Here<img src="blinkingNEW.gif" width="30" height="12" <="" a=""></a></font></b><br> </tr><tr>
-	<td><b><font color="#0000FF">D / GHA</font></b></td>
-    <td><b><font color="#008000">Starts: 14 August 2021 (11:00 AM - 12:30 PM)</font></b>
-	<td><b><font color="#FF0000"><a href = "pdf/DU_D_unit.pdf">Click Here<img src="blinkingNEW.gif" width="30" height="12" <="" a=""></a></font></b><br> </tr><tr>
-	<td><b><font color="#0000FF">E / CHA (GK)</font></b></td>
-    <td><b><font color="#008000">Starts: 31 July 2021 (11:00 AM - 11:30 PM)</font></b>
-	<td><b><font color="#FF0000"><a href = "pdf/DU_E_unit.pdf">Click Here<img src="blinkingNEW.gif" width="30" height="12" <="" a=""></a></font></b><br>  </tr><tr>
-	<td><b><font color="#0000FF">E / CHA (Drawing)</font></b></td>
-    <td><b><font color="#008000">Starts: --------</font></b><br>
-</table>
-	</p>
-	</center></p>
+		<center>
+        <table class="a">
+          <tr>
+            <th>
+              <center> <b>
+                  <h2>
+                    <font color="#990000"><span style="background-color: #FFFF00"> News / Notices </span></font>
+                  </h2>
+                </b></center>
+            </th>
+          </tr>
+          <tr class="a">
+            <td>
+			<div class="w3-responsive">
+			<div class="scroll-box">
+              <div class="row-notice">
+
+                
+                  <div class="column-notice">
+                    <div class="card-notice">
+                      <h6><i class="fa fa-clock-o m-r-10"></i> &nbsp; 2021-05-01 00:22:01 &nbsp; <span class="notice-result">@notice</span></h6>
+                      <p>সাম্প্রতিক দেশব্যাপী করোনা সংক্রমনের উর্ধ্বমুখী বিস্তারের কারনে পূর্বঘোষিত ১০ জুলাই ২০২১ তারিখ হতে ঢাকা বিশ্ববিদ্যালয়ের ক, খ, গ, ঘ ও চ ইউনিটের প্রবেশপত্র ডাউনলোডের কার্যক্রমটি স্থগিত করা হলো।
+                                                                            ভর্তি পরীক্ষার তারিখের বিষয়ে সিদ্ধান্ত অতিশীঘ্রই পরীক্ষার্থীদের অবহিত করা হবে।</p>
+                    </div>
+                  </div>
+				  <div class="column-notice">
+                    <div class="card-notice">
+                      <h6><i class="fa fa-clock-o m-r-10"></i> &nbsp; 2021-05-01 00:22:01 &nbsp; <span class="notice-result">@notice</span></h6>
+                      <p>যে সকল শিক্ষার্থী টাকা জমা দিয়েছেন, কিন্তু লগইন করার পর টাকা জমার তথ্য ড্যাশবোর্ডে দেখতে পাচ্ছেন না তাদের টাকা লেনদেনের তথ্য যেমন ট্রান্‌জাকশন নম্বর (বিকাশ), ডেবিট/ক্রেডিট কার্ড, রকেট বা নগদ হিসাব নম্বরের প্রথম ও শেষ চারটি সংখ্যা ইত্যাদি ড্যাশবোর্ডে পেমেন্ট ক্লেইম এ ক্লিক করে বিস্তারিত জানানোর জন্য অনুরোধ করা যাচ্ছে। </p>
+                    </div>
+                  </div>
+                
+             </div>
+			 </div>
+			 </div>
+            </td>
+          </tr>
+        </table>
+      </center>
 	
 
 	</div>
@@ -432,9 +489,84 @@ li.a{
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </center></p>
+
+
+  <div class="w3-container" style="padding:128px 16px" id="Sch">
+    <h3 class="w3-center"><b>
+        <font color="#990000"># Application Deadline, Admission Exam Date and Schedule # </font>
+      </b></h3>
+    <div class="w3-row-padding w3-" style="margin-top:64px">
+	
+	  
+	  <center>
+	<p>
+	<div class="w3-responsive">
+<table>
+  <tr>
+    <th>Course Name/Category</th>
+    <th>Apply Deadline</th>
+  </tr>
+  <tr>
+    <td><b><font color="#0000FF">All Unit (A,B,C,D,E)</font></b></td>
+    <td><b><font color="#008000">Starts: 08 March 2021 (4:00 PM)</font></b><br>
+        <p><b><font color="#FF0000">Ends: 31 March 2021 (11:59 PM)</font></b><br></p>
+		<p><b><font color="#FF0000">Ends (Fees): 01 April 2021 (11:59 PM)</font></b></td></p>
+</table>
+</div>
+	</p>
+	</center><p>
+	<center>
+	<p>
+	<div class="w3-responsive">
+<table>
+  <tr>
+    <th>Units Name</th>
+    <th>Exam</th>
+	<th><center> Details </center></th>
+  </tr>
+  <tr>
+    <td><b><font color="#0000FF">A / KA</font></b></td>
+    <td><b><font color="#008000">Starts: 06 August 2021 (11:00 AM - 12:30 PM)</font></b></td>
+	<td><a href="pdf/DU_A_unit.pdf" target="_blank"><center><button class="btn" style="float:none;"><i class="fa fa-download"></i> Download</button></center></a></td></tr><tr>
+     <td><b><font color="#0000FF">B / KHA</font></b></td>
+    <td><b><font color="#008000">Starts: 07 August 2021 (11:00 AM - 12:30 PM)</font></b>
+	<td><a href="pdf/DU_B_unit.pdf" target="_blank"><center><button class="btn" style="float:none;"><i class="fa fa-download"></i> Download</button></center></a></td> </tr><tr>  
+	<td><b><font color="#0000FF">C / GA</font></b></td>
+    <td><b><font color="#008000">Starts: 13 August 2021 (11:00 AM - 12:30 PM)</font></b>
+	<td><a href="pdf/DU_C_unit.pdf" target="_blank"><center><button class="btn" style="float:none;"><i class="fa fa-download"></i> Download</button></center></a></td> </tr><tr>
+	<td><b><font color="#0000FF">D / GHA</font></b></td>
+    <td><b><font color="#008000">Starts: 14 August 2021 (11:00 AM - 12:30 PM)</font></b>
+	<td><a href="pdf/DU_D_unit.pdf" target="_blank"><center><button class="btn" style="float:none;"><i class="fa fa-download"></i> Download</button></center></a></td> </tr><tr>
+	<td><b><font color="#0000FF">E / CHA (GK)</font></b></td>
+    <td><b><font color="#008000">Starts: 31 July 2021 (11:00 AM - 11:30 PM)</font></b>
+	<td rowspan="2"><a href="pdf/DU_E_unit.pdf" target="_blank"><center><button class="btn" style="float:none;"><i class="fa fa-download"></i> Download</button></center></a></td>  </tr><tr>
+	<td><b><font color="#0000FF">E / CHA (Drawing)</font></b></td>
+    <td><b><font color="#008000">Starts: --------</font></b><br>
+</table>
+</div>
+	</p>
+	</center></p>
+	  
+	  
+	</div>
+	</div>
+	
+	<p><center>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Uni -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5211135461694979"
+     data-ad-slot="3371058781"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center></p>
 	
 	
-	<div class="w3-container" style="padding:128px 16px" id="team">
+	<div class="w3-container" style="padding:128px 16px" id="Hta">
   <h2 class="w3-center"><b><font color="#990000"># How to Apply #</font></b></h2>
   <div class="w3-row-padding w3-" style="margin-top:64px">
 
@@ -636,7 +768,7 @@ function openinfo(evt, cityName) {
 </script>
 </center></p>
 
-  <div class="w3-container" style="padding:128px 16px" id="team">
+  <div class="w3-container" style="padding:128px 16px" id="Req">
   <h3 class="w3-center"><b><font color="#990000"># REQUIREMENT OF UNIVERSITY OF DHAKA (DU) ADMISSION #</font></b></h3>
   <div class="w3-row-padding w3-" style="margin-top:64px">
   
@@ -1015,8 +1147,8 @@ function openinfo(evt, cityName) {
 </center></p>		
 
 
-	 <div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center"><b><font color="#990000"># EXAM SUBJECTS AND NUMBER OF QUESTIONS OF CU ADMISSION #</font></b></h3>
+	 <div class="w3-container" style="padding:128px 16px" id="Syl">
+  <h3 class="w3-center"><b><font color="#990000"># EXAM SUBJECTS AND NUMBER OF QUESTIONS OF DU ADMISSION #</font></b></h3>
   <div class="w3-row-padding w3-" style="margin-top:64px">
   
 <button class="accordion"><font color="#990000"> "A / KA" UNIT </font></button>
@@ -1031,21 +1163,23 @@ function openinfo(evt, cityName) {
   <table>
   <tr>
   <th><center> Admission Test Subject </center></th>
+  <th><center> MCQ </center></th>
+  <th><center> Written </center></th>
   <th><center> Number Distribution </center></th>
   </tr><tr>
-  <td> Bangla </td> <td><center> 10 </center></td>
+  <td> Physics </td> <td><center> 15 </center></td> <td><center> 10 </center></td> <td><center> 25 </center></td>
    </tr><tr>
-   <td> English </td> <td><center> 15 </center></td>
+   <td> Chemistry </td> <td><center> 15 </center></td> <td><center> 10 </center></td> <td><center> 25 </center></td>
    </tr><tr>
-   <td> Physics, Cemistry, Mathematics and Biology (The applicant has to answer any 03 questions) </td> <td><center> 25 × 3 = 75 </center></td>
+   <td>  Math, Biology, Bangla, English (The applicant has to answer any 02 subjects) </td> <td><center> 15 × 2 = 30 </center></td> <td><center> 10 × 2 = 20 </center></td> <td><center> 50 </center></td>
    </tr><tr>
-   <td> Total Number </td> <td><center> 100 </center></td>
+   <td> Total Number </td> <td><center> 60 </center></td> <td><center> 40 </center></td> <td><center> 100 </center></td>
    </tr><tr>
-   <td colspan = "2"><b><font color="#008000"> Pass Number: 40 </font></b></td>
+   <td> Time </td> <td><center> 45 Minutes </center></td> <td><center> 45 Minutes </center></td> <td><center> 1 hours 30 minutes  </center></td>
    </tr><tr>
-   <td colspan = "2"> <font color="#FF0000"><b>*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2</b></font> </td>
+   <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 24 </center></td> <td><center> 12 </center></td> <td><center> 40 </center></td>
    </tr><tr>
-   <td colspan = "2"><font color="#FF0000"><b>*** Note: The applicant has to get minimum 03 marks in Bengali and minimum 04 marks in English in the admission test. </b></font></td>
+   <td colspan = "4"> <font color="#FF0000">*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2 = Total Number 120</font> </td>
    </tr>
    
    </table>
@@ -1068,23 +1202,33 @@ function openinfo(evt, cityName) {
   <table>
   <tr>
   <th><center> Admission Test Subject </center></th>
+  <th><center> MCQ </center></th>
+  <th><center> Written </center></th>
   <th><center> Number Distribution </center></th>
   </tr><tr>
-  <td> Bangla / Optional English <sup> 1 </sup></td> <td><center> 35 </center></td>
+  <td> Bangla / Elective English <sup><font color="#FF0000"> 1 </font></sup></td> <td><center> 15 </center></td> <td><center> 20 </center></td> <td><center> 35 </center></td>
    </tr><tr>
-   <td> English </td> <td><center> 35 </center></td>
+   <td> General English </td> <td><center> 15 </center></td> <td><center> 20 </center></td> <td><center> 35 </center></td> 
    </tr><tr>
-   <td> General Knowledge </td> <td><center> 30 </center></td>
+   <td> General Knowledge </td> <td><center> 30 </center></td> <td><center> -- </center></td> <td><center> 30 </center></td> 
    </tr><tr>
-   <td> Total Number </td> <td><center> 100 </center></td>
+   <td> Total Number </td> <td><center> 60 </center></td> <td><center> 40 </center></td>  <td><center> 100 </center></td>
    </tr><tr>
-   <td colspan = "2"><b><font color="#008000"> Pass Number: 40 </font></b></td>
+   <td> Time </td> <td><center> 45 Minutes </center></td> <td><center> 45 Minutes </center></td> <td><center> 1 hours 30 minutes  </center></td>
    </tr><tr>
-   <td colspan = "2"> <font color="#FF0000"><b>*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2</b></font> </td>
+    <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 24 <sup><font color="#FF0000"> 2 </font></sup></center></td> <td><center> 11 <sup><font color="#FF0000"> 3 </font></sup></center></td> <td><center> 40 </center></td>
    </tr><tr>
-   <td colspan = "2"><font color="#FF0000"><b>*** Note:<sup>1</sup> Those who have not read Bangla as their mother tongue in the Higher Secondary / Equivalent Examination will answer the optional English subject instead of Bangla. In this case pass number 10. </b></font></td>
+   <td colspan = "4"> <font color="#FF0000">*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2 = Total Number 120</font> </td>
+   </tr><tr>
+   <td colspan = "4"> <font color="#FF0000">*** Note : 0.25 marks will be a minus for each incorrect answer.</font> </td>
+   </tr><tr>
+   <td colspan = "4"><font color="#FF0000">*** Note (1) : Only GCE / 'A' level passed students will answer from elective English subject.</font></td>
+   </tr><tr>
+   <td colspan = "4"><font color="#FF0000">*** Note (2) : Minimum Pass Number Bangla / Elective English - 05, General English - 05, General Knowledge - 10.</font></td>
    </tr>
-   
+   <tr>
+   <td colspan = "4"><font color="#FF0000">*** Note (3) : Minimum Pass Number Bangla / Elective English - 05, General English - 05.</font></td>
+   </tr>
    </table>
    </div>
    </center>
@@ -1093,43 +1237,7 @@ function openinfo(evt, cityName) {
   </div>
 
 </div>
-<button class="accordion"><font color="#990000"> "B / KHA" SUB-UNIT </font></button>
-<div class="panel">
 
-   <div class="w3-container" style="padding:128px 0px" id="team">
-  <h3 class="w3-center"><b><font color="#990000"># B Sub-Unit Admission Test Subject, Subject Based Number Distribution and Minimum Pass Number #</font></b></h3>
-  <div class="w3-row-padding w3-" style="margin-top:64px">
-  
-  <center>
-  <div class="w3-responsive">
-  <table>
-  <tr>
-  <th><center> Admission Test Subject </center></th>
-  <th><center> Number Distribution </center></th>
-  </tr><tr>
-  <td> Bangla / Optional English <sup> 1 </sup></td> <td><center> 35 </center></td>
-   </tr><tr>
-   <td> English </td> <td><center> 35 </center></td>
-   </tr><tr>
-   <td> General Knowledge </td> <td><center> 30 </center></td>
-   </tr><tr>
-   <td> Total Number </td> <td><center> 100 </center></td>
-   </tr><tr>
-   <td colspan = "2"><b><font color="#008000"> Pass Number: 40 </font></b></td>
-   </tr><tr>
-   <td colspan = "2"> <font color="#FF0000"><b>*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2</b></font> </td>
-   </tr><tr>
-   <td colspan = "2"><font color="#FF0000"><b>*** Note:<sup>1</sup> Those who have not read Bangla as their mother tongue in the Higher Secondary / Equivalent Examination will answer the optional English subject instead of Bangla. In this case pass number 10. </b></font></td>
-   </tr>
-   
-   </table>
-   </div>
-   </center>
-  
-  </div>
-  </div>
-
-</div>
 <button class="accordion"><font color="#990000"> "C / GA" UNIT </font></button>
 <div class="panel">
 
@@ -1137,29 +1245,180 @@ function openinfo(evt, cityName) {
   <h3 class="w3-center"><b><font color="#990000"># C Unit Admission Test Subject, Subject Based Number Distribution and Minimum Pass Number #</font></b></h3>
   <div class="w3-row-padding w3-" style="margin-top:64px">
   
+  <h4><font color="blue"><b># <u>Business Studies</b></font></h4></u>
+  
   <center>
   <div class="w3-responsive">
   <table>
-  <tr>
-  <th><center> Admission Test Subject </center></th>
-  <th><center> Number Distribution </center></th>
-  </tr><tr>
-  <td> English </td> <td><center> 30 </center></td>
+   <tr>
+      <th><center>MCQ</center></th>
+	  <th><center>Written</center></th>
    </tr><tr>
-   <td> Accounting </td> <td><center> 35 </center></td>
    </tr><tr>
-   <td> Business Policy and Application (Business Organization and Management, Banking & Insurance) </td> <td><center> 35 </center></td>
-   </tr><tr>
-   <td> Total Number </td> <td><center> 100 </center></td>
-   </tr><tr>
-   <td colspan = "2"><b><font color="#008000"> Pass Number: 40 </font></b></td>
-   </tr><tr>
-   <td colspan = "2"> <font color="#FF0000"><b>*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2</b></font> </td>
-   </tr>
    
+   <td>
+   
+   <table>
+   <tr>
+   <th><center>Subjects</center></th>
+   <th><center>Number Distribution</center></th>
+   </tr><tr>
+    <td>Bangla</td> <td><center>12</center></td>
+   </tr><tr>
+    <td>English</td> <td><center>12</center></td>
+   </tr>
+   <tr>
+    <td>Accounting</td> <td><center>12</center></td>
+   </tr>
+   <tr>
+    <td>Business principle and apply</td> <td><center>12</center></td>
+   </tr>
+   <tr>
+    <td>Marketing / Finance and banking (Choice any one subject)</td> <td><center>12</center></td>
+   </tr>
+   <tr>
+    <td><b>Total Number</b></td> <td><center><b>60</b></center></td>
+   </tr>
+   <tr>
+   <td> Time </td> <td><center> 45 Minutes </center></td>
+   </tr><tr>
+    <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 24 (English - 05)</center></td>
+   </tr>
+   </table>
+
+   </td>
+   
+   <td>
+    
+   <table>
+   <tr>
+   <th><center>Subjects</center></th>
+   <th><center>Number Distribution</center></th>
+   </tr><tr>
+   <td>Bangla to English translate</td> <td><center>(5×1)=05</center></td>
+   </tr><tr>
+    <td>English to Bangla translate</td> <td><center>(5×1)=05</center></td>
+   </tr>
+   <tr>
+    <td>Subject-based Short disclosure (English)</td> <td><center>(5×1)=05</center></td>
+   </tr>
+   <tr>
+    <td>Precis writing</td> <td><center>(1×5)=05</center></td>
+   </tr>
+   <tr>
+   <td>Short composition (Bangla)</td> <td><center>(1×5)=05</center></td>
+   </tr>
+   <tr>
+    <td>Short questions from 5 compulsory subjects</td> <td><center>(5×3)=15</center></td>
+   </tr>
+   <tr>
+    <td><b>Total Number</b></td> <td><center><b>40</b></center></td>
+   </tr>
+   <tr>
+   <td> Time </td> <td><center> 45 Minutes </center></td>
+   </tr><tr>
+    <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 11 </center></td>
+   </tr>
+   </table>
+   </td>
+   </tr>
+   <tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2 = Total Number 120</font> </td>
+   </tr><tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : 0.25 marks will be a minus for each incorrect answer (MCQ).</font> </td>
+   </tr><tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : Total Minimum Pass Number : 40</font> </td>
+   </tr>
+   <tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : Total time : 1 hours 30 minutes</font> </td>
+   </tr>
    </table>
    </div>
    </center>
+  
+  
+  <h4 style="padding-top:100px;"><font color="blue"><b># <u>A Level</b></font></h4></u>
+  
+  <center>
+  <div class="w3-responsive">
+  <table>
+   <tr>
+      <th><center>MCQ</center></th>
+	  <th><center>Written</center></th>
+   </tr><tr>
+   </tr><tr>
+   
+   <td>
+   
+   <table>
+   <tr>
+   <th><center>Subjects</center></th>
+   <th><center>Number Distribution</center></th>
+   </tr><tr>
+    <td>English</td> <td><center>16</center></td>
+   </tr><tr>
+    <td>Advanced English</td> <td><center>12</center></td>
+   </tr>
+   <tr>
+    <td>Business Studies Accounting Economics (Choice any two subject)</td> <td><center>(2×16)=32</center></td>
+   </tr>
+   <tr>
+    <td><b>Total Number</b></td> <td><center><b>60</b></center></td>
+   </tr>
+   <tr>
+   <td> Time </td> <td><center> 45 Minutes </center></td>
+   </tr><tr>
+    <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 24 (English - 05)</center></td>
+   </tr>
+   </table>
+
+   </td>
+   
+   <td>
+    
+   <table>
+   <tr>
+   <th><center>Subjects</center></th>
+   <th><center>Number Distribution</center></th>
+   </tr><tr>
+   <td>Essay writing</td> <td><center>(1×5)=05</center></td>
+   </tr><tr>
+    <td>Precis writing</td> <td><center>(1×5)=05</center></td>
+   </tr>
+   <tr>
+    <td>Letter writing</td> <td><center>(1×5)=05</center></td>
+   </tr>
+   <tr>
+    <td>Definition of concepts</td> <td><center>(5×1)=05</center></td>
+   </tr>
+   <tr>
+   <td>Short questions from compulsory subjects</td> <td><center>(5×4)=20</center></td>
+   </tr>
+   <tr>
+    <td><b>Total Number</b></td> <td><center><b>40</b></center></td>
+   </tr>
+   <tr>
+   <td> Time </td> <td><center> 45 Minutes </center></td>
+   </tr><tr>
+    <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 11 </center></td>
+   </tr>
+   </table>
+   </td>
+   </tr>
+   <tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2 = Total Number 120</font> </td>
+   </tr><tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : 0.25 marks will be a minus for each incorrect answer (MCQ).</font> </td>
+   </tr><tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : Total Minimum Pass Number : 40</font> </td>
+   </tr>
+   <tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : Total time : 1 hours 30 minutes</font> </td>
+   </tr>
+   </table>
+   </div>
+   </center>
+  
   
   </div>
   </div>
@@ -1172,30 +1431,35 @@ function openinfo(evt, cityName) {
   <h3 class="w3-center"><b><font color="#990000"># D Unit Admission Test Subject, Subject Based Number Distribution and Minimum Pass Number #</font></b></h3>
   <div class="w3-row-padding w3-" style="margin-top:64px">
 
-  <center>
+ <center>
   <div class="w3-responsive">
   <table>
   <tr>
   <th><center> Admission Test Subject </center></th>
+  <th><center> MCQ </center></th>
+  <th><center> Written </center></th>
   <th><center> Number Distribution </center></th>
   </tr><tr>
-  <td> Bangla / Optional English <sup> 1 </sup></td> <td><center> 30 </center></td>
+  <td> Bangla /  Advanced English <sup><font color="#FF0000"> 1 </font></sup></td> <td><center> 15 </center></td> <td><center> 15 </center></td> <td><center> 30 </center></td>
    </tr><tr>
-   <td> English </td> <td><center> 30 </center></td>
+   <td> General English </td> <td><center> 15 </center></td> <td><center> 15 </center></td> <td><center> 30 </center></td> 
    </tr><tr>
-   <td> Analysis skills </td> <td><center> 20 </center></td>
+   <td> General Knowledge </td> <td><center> 30 </center></td> <td><center> 10 </center></td> <td><center> 40 </center></td> 
    </tr><tr>
-      <td> General Knowledge / Math / Economics </td> <td><center> 20 </center></td>
+   <td> Total Number </td> <td><center> 60 </center></td> <td><center> 40 </center></td>  <td><center> 100 </center></td>
    </tr><tr>
-   <td> Total Number </td> <td><center> 100 </center></td>
+   <td> Time </td> <td><center> 45 Minutes </center></td> <td><center> 45 Minutes </center></td> <td><center> 1 hours 30 minutes  </center></td>
    </tr><tr>
-   <td colspan = "2"><b><font color="#008000"> Pass Number: 40 </font></b></td>
+    <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 24 <sup><font color="#FF0000"> 2 </font></sup></center></td> <td><center> 10 </center></td> <td><center> 40 </center></td>
    </tr><tr>
-   <td colspan = "2"> <font color="#FF0000"><b>*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2</b></font> </td>
+   <td colspan = "4"> <font color="#FF0000">*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2 = Total Number 120</font> </td>
    </tr><tr>
-   <td colspan = "2"><font color="#FF0000"><b>*** Note:<sup>1</sup> Those who have not read Bangla as their mother tongue in the Higher Secondary / Equivalent Examination will answer the optional English subject instead of Bangla. In this case, pass number 10 in all departments of law and social science faculty and pass number 8 in other departments. </b></font></td>
+   <td colspan = "4"> <font color="#FF0000">*** Note : 0.25 marks will be a minus for each incorrect answer.</font> </td>
+   </tr><tr>
+   <td colspan = "4"><font color="#FF0000">*** Note (1) : Only GCE / 'A' level passed students will answer from elective English subject.</font></td>
+   </tr><tr>
+   <td colspan = "4"><font color="#FF0000">*** Note (2) : Minimum Pass Number Bangla / Advanced English - 05, General English - 05, General Knowledge - 10.</font></td>
    </tr>
-   
    </table>
    </div>
    </center>
@@ -1204,42 +1468,38 @@ function openinfo(evt, cityName) {
    </div>
 
 </div>
-<button class="accordion"><font color="#990000"> "D / GHA" SUB-UNIT </font></button>
+<button class="accordion"><font color="#990000"> "E / CHA" UNIT </font></button>
 <div class="panel">
 
    <div class="w3-container" style="padding:128px 0px" id="team">
-  <h3 class="w3-center"><b><font color="#990000"># D Sub-Unit Admission Test Subject, Subject Based Number Distribution and Minimum Pass Number #</font></b></h3>
+  <h3 class="w3-center"><b><font color="#990000"># E Unit Admission Test Subject, Subject Based Number Distribution and Minimum Pass Number #</font></b></h3>
   <div class="w3-row-padding w3-" style="margin-top:64px">
   
   <center>
   <div class="w3-responsive">
   <table>
   <tr>
-  <th colspan = "2"><center> Admission Test Subject </center></th>
-  <th colspan = "2"><center> Number Distribution </center></th>
+  <th> Admission Test Subject </center></th>
+  <th> Number Distribution </center></th>
   </tr><tr>
-  <td colspan = "2"> Bangla / Optional English <sup> 1 </sup></td> <td><center> 35 </center></td>
+   <td>MCQ (General Knowledge)</td> <td><center>40</center></td>
    </tr><tr>
-   <td colspan = "2"> English </td> <td><center> 30 </center></td>
-   </tr><tr>
-   <td colspan = "2"> General Knowledge </td> <td><center> 35 </center></td>
-   </tr><tr>
-   <td colspan = "2"> Total Number </td> <td><center> 100 </center></td>
-   </tr><tr>
-   <td colspan = "3"><b><font color="#008000"> Pass Number: 35 </font></b></td>
-   </tr><tr>
-   <td colspan = "3"><b><font color="#008000"><center> Only BKSP and professional player quota pass number 30 </center></font></b></td>
-   </tr><tr>
-   <td rowspan = "2"> Practical Examination for the Department of Physical Education and Sports Science (Applicants for general and quota seats must pass the practical examination.) </td>
-   <td> Field Test </td> <td> 20 </td>
-   </tr><tr>
-    <td> Certificate of Sports </td> <td> 10 </td>
-   </tr><tr>
-   <td colspan = "3"> <font color="#FF0000"><b>*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2</b></font> </td>
-   </tr><tr>
-   <td colspan = "3"><font color="#FF0000"><b>*** Note:<sup>1</sup> Those who have not read Bangla as their mother tongue in the Higher Secondary / Equivalent Examination will answer the optional English subject instead of Bangla. In this case pass number 08. </b></font></td>
+   <td> Drawing </td> <td><center>60</center></td>
    </tr>
-   
+   <tr>
+   <td> <b>Total</b> </td> <td><center>100</center></td>
+   </tr>
+   <tr>
+   <td> Time </td> <td><center> 1 hours 30 minutes  </center></td>
+   </tr>
+    <tr>
+   <td><b><font color="#008000">Minimum Pass Number</font></b></td> <td><center> 40% <center></td>
+   </tr>
+   <tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : 100 (Admission Result) + SSC GPA × 2 + HSC GPA × 2 = Total Number 120</font> </td>
+   </tr><tr>
+   <td colspan = "2"> <font color="#FF0000">*** Note : 0.25 marks will be a minus for each incorrect answer (MCQ).</font> </td>
+   </tr>
    </table>
    </div>
    </center>
@@ -1251,8 +1511,7 @@ function openinfo(evt, cityName) {
 </div>
   
   </div>
-  </div>
-				
+  </div>	
 				
 <p><center>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -1276,184 +1535,30 @@ function openinfo(evt, cityName) {
 	<div class="w3-container w3-light-grey" style="padding: 10px 10px; margin: 10">
           
 	<ul><b>
-		<li> du admission </li>
-		<li> du admission circular 2020-21 </li>
-		<li> du admission form </li>
-		<li> du admission 2020 </li>
-		<li> du admission circular </li>
-		<li> du admission result 2020 </li>
-		<li> du admission result </li>
-		<li> du admission 2020-21 </li>
-		<li> du admission login </li>
-		<li> du admission test result </li>
-		<li> du admission requirements </li>
-		<li> du admission notice </li>
-		<li> 7 college du admission </li>
-		<li> du admission result ka unit </li>
-		<li> how to get du admission result </li>
-		<li> admission.eis.du.ac.bd 2019-20 </li>
-		<li> admission.eis.du.ac.bd </li></b>
+		<li class="e"> du admission </li>
+		<li class="e"> du admission circular 2020-21 </li>
+		<li class="e"> du admission form </li>
+		<li class="e"> du admission 2020 </li>
+		<li class="e"> du admission circular </li>
+		<li class="e"> du admission result 2020 </li>
+		<li class="e"> du admission result </li>
+		<li class="e"> du admission 2020-21 </li>
+		<li class="e"> du admission login </li>
+		<li class="e"> du admission test result </li>
+		<li class="e"> du admission requirements </li>
+		<li class="e"> du admission notice </li>
+		<li class="e"> 7 college du admission </li>
+		<li class="e"> du admission result ka unit </li>
+		<li class="e"> how to get du admission result </li>
+		<li class="e"> admission.eis.du.ac.bd 2019-20 </li>
+		<li class="e"> admission.eis.du.ac.bd </li></b>
 		
 		</ul>
 		  
-        </div>
-		
-		
-		
-		</div>
-
-<div id="Paris" class="tabcontent">
-
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h1 class="w3-center"><b><font color="#990000">DU Admission Information 2020 - 2021 ( MPhil )</font></b></h1><hr style="">
-  <div class="w3-row-padding w3-" style="margin-top:64px;">
-  
-  <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <div class="col-5" align="center"><br>
-<img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Dhaka_University_logo.svg/180px-Dhaka_University_logo.svg.png" style="width: 150px; height: 150px; border-radius:50%; border: 1px solid #2B325355;">
-</div><br><hr style="">
-        <div class="w3-container">
-          <center><b><font color="#990000"><h4>University<br> of<br> Dhaka (DU)</h4></font></center>
-          <p><a href="https://jobs.du.ac.bd/wp-content/uploads/2020/10/MPhil-Notice.pdf"<button class="w3-button w3-light-grey w3-block">Click Here For Circular Download</button></p></a>
-		  <p><a href="https://admission.eis.du.ac.bd/"<button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
-		  <p><a href=""<button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
-        </div>
-      </div>
     </div>
-	
-		<center> <b> <h2><font color="#990000"> News / Notices</font> </h2></b></center>
-  
-  </div></div>
-  
-  
-    	<p><center>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Uni -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5211135461694979"
-     data-ad-slot="3371058781"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</center></p>
-  
-  <div class="w3-container" style="padding: 128px 32px" id="team">
-  <h2 class="w3-center"><b><font color="#990000"># DU Admission procedure 2020 - 2021 (MPhil) #</font></b></h2>
-  <div class="w3-row-padding w3-" style="margin-top:64px">
-  
-  <p style="font-family:calibri"><h5><b>
-     MPhil in 2020-2021 academic year. Applications are being invited in the prescribed form from the interested candidates for admission to the program. 
-	 Candidates are selected by the caretaker from among the teachers of the concerned department / institute under his / her and through MPhil must apply for research. 
-	 The application form can be downloaded on the website of Dhaka University (https://du.ac.bd) from 18/10/2020 to 18/11/2020. 500 / - (Five Hundred) (Non-refundable) has to be deposited in Janata Bank (Dhaka B, TSC Branch) for the fee of admission form. 
-	 The application form should be clearly written / typed and duly filled and submitted to the office of the Chairman of the concerned department / director of the institute by 22/11/2020. Original copy of the deposit receipt of Rs.500 / - (Five Hundred) deposited for the application form fee along with the application form, photocopy of all examination number sheets, 1 (one) copy of recent passport size photograph attested by the concerned supervisor / department chairman / director of the institute and a Outline (Synopsis) must be submitted.
-	</h5></b></p>
-					
-  </div>
-  </div>
-  
-      	<p><center>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Uni -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5211135461694979"
-     data-ad-slot="3371058781"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</center></p>
-  
-  <div class="w3-container" style="padding: 128px 32px" id="team">
-  <h3 class="w3-center"><b><font color="#990000"># Eligibility, conditions and other information for admission in the MPhil program #</font></b></h3>
-  <div class="w3-row-padding w3-" style="margin-top:64px">
-  
-<p style="font-family:calibri"><h5><b>
-
-		<ol type="1">
-		<li><ol type="A"> <li>Four-year undergraduate honours degree and 1-year postgraduate degree.<br>
-		<p><center><b>OR</b></center></p></li>
-		<li>Three-year undergraduate honours and one-year postgraduate degree.<br>
-		<p><center><b> OR </b></center></p></li>
-		<li>Must have two years undergraduate and two years postgraduate degree and 1-year teaching / research institution at undergraduate level or 1 research paper in a recognized journal.
-		<p><center><b> OR </b></center></p></li>
-		<li>Five-year term MBBS degree. Candidates can apply to the department related to their degree.<br>
-		<p><font color="#FF0000">*** Candidates mentioned in A, B, C and D should have a minimum of 50% marks in all the examinations including at least 2nd division / class. Must have 3.5 out of 5 or 3 out of 4 C.G.P.A.</font></p>
-		</li></ol>
-		<li>The MPhil program is for two years (i.e. 1st-year theoretical course and 2nd-year thesis). However, the maximum period of registration in the MPhil program is 4 (four) years. MPhil courses of all faculties / institutes will be considered as full-time courses. Candidates working without Dhaka University teachers will have to join the MPhil program with 1 (one) year leave.</li>
-		<li>If the MPhil researcher fails to pass the 1st year for the first time or cannot participate in the examination or cannot complete the course, he / she can be re-admitted only once in the next academic year on the recommendation of the supervising and departmental academic committee. After that there will be no chance of re-admission.</li>
-		<li><ol type="A"><li> Researchers registered in the MPhil program will have to take part in a theoretical test of two units (100 marks per unit) or four units (50 marks per unit) for a total of 200 marks. 4 hours will be required for Unit 100 and 2 hours for Unit 50. However, all the candidates who have passed the subject other than Geography and Environment (Non-Geographer) will be admitted in the Department of Geography and Environment. There will also be an oral test of 100 marks. The pass mark in the theoretical course is 50% on average and the pass mark in the oral exam is 50%. </li>
-		<li>After passing the theoretical examination in the MPhil program (1st part), if a researcher fails the oral examination, he can take part in the oral examination with the next batch. However, the concerned department / institute can take an oral examination within 3 to 6 months if desired.</li>
-		<li> If a researcher fails the MPhil course examination and gets less than 50% marks in a theoretical course / oral examination, he / she can appear in the next examination as an irregular examinee by paying the examination fee as usual without re-admission in that course / oral examination. No less than 30 marks will be counted in the examination of any one course. However, if you get 50% and above marks in any course, you will have the right to retain it. </li>
-		<li> Researchers who have passed the 1st year of MPhil should be admitted in the 2nd year within 1 (one) month of the publication of the test results. Admission can be done up to 1 (one) more month by paying a delay fee at the prescribed rate of 10 (ten) rupees daily. If you are not admitted within 2 (two) months of the publication of the results of the 1st year examination, you can be admitted till the registration period by paying a late fee of Rs. </li>
-		</li></ol>
-		<li> A total of 50 (fifty) scholarships will be sanctioned at the rate fixed by the University Grants Commission, including one Sher-e-Bangla Scholarship for the Department of History on a merit basis from among the applicants in the current academic year in the MPhil program. However, if the researcher is employed or gets scholarship / financial assistance from any other institution, he / she will not be considered eligible to avail of this scholarship. If the thesis is submitted during the registration period, the scholarship will be renewed in the 2nd year. However, if the researcher cannot pass the 1st year for the first time, then this scholarship will not be given. </li>
-		<li> The applicant has to submit the application form to the concerned department / institute after getting the signature of the dean of the hall in which he / she wishes to be admitted in the MPhil program as a student. It is to be noted that a student of the hall of Dhaka University who has obtained a bachelor's degree / master's degree cannot be admitted in the MPhil program as a student of that hall. </li>
-		<li> A supervisor can serve as a supervisor of a total of 8 (eight) or 10 (ten) researchers in a combined MPhil and PhD program. </li>
-		<li> Professors, associate professors and assistant professors with PhD degrees will be able to supervise researchers in the MPhil program. </li>
-		<li> Convener and Dean of the Eligibility Verification and Equality Determination Committee to ascertain the equivalence of the degree / examination passing certificate of the candidates interested in admission to the SSC, HSC, Undergraduate / Postgraduate Honors and Postgraduate examinations from private universities in Bangladesh and abroad, You have to apply along with the Faculty of Earth and Environmental Sciences and submit a copy of the equation with the application for admission. </li>
-		<li> The rates of various fees of the MPhil program can be known from the office of the Director of Accounts (Room No. 124). Only candidates who meet the qualifications and conditions mentioned in this notification will be considered eligible to apply for admission to the MPhil program. Failure to provide complete and correct information will result in the cancellation of admission application / admission. </li>
-		</li></ol>
-					
-</h5></b></p>
-  
-   </div>
-  </div>
-  
-    	<p><center>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Uni -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5211135461694979"
-     data-ad-slot="3371058781"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</center></p>
-  
-  
-  <div class="fb-comments" data-href="http://bdvarsity.info/du.html" data-width="100%" data-numposts="10"></div>
-  
-  <div class="w3-container w3-light-grey" style="padding: 10px 10px; margin: 10">
-          
-	<ul><b>
-		<li> dhaka university mphil admission 2020 - 2021 </li>
-		<li> mphil circular in dhaka university </li>
-		<li> mphil circular of dhaka university </li>
-		<li> mphil circular 2021 </li></b>
 		
-		</ul>
-		  
-        </div>
-  
-</div>
+		
 
-
-<div id="Tokyo" class="tabcontent">
-
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h2 class="w3-center"><b><font color="#990000">Coming Very Soon..........</font></b></h2>
-  <div class="w3-row-padding w3-" style="margin-top:64px">
-  </div></div>
-
-</div>
-
-<div id="ctg" class="tabcontent">
-
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h2 class="w3-center"><b><font color="#990000">Coming Very Soon..........</font></b></h2>
-  <div class="w3-row-padding w3-" style="margin-top:64px">
-  </div></div>
-
-</div>
 
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
@@ -1489,7 +1594,7 @@ function openinfo(evt, cityName) {
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +8801993627604</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: support@bdvarsity.info</p>
     <br>
-    <form action="/action_page.php" target="_blank">
+    <form action="/information.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
@@ -1503,63 +1608,76 @@ function openinfo(evt, cityName) {
   
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-  <a href="#team" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <a href="https://www.facebook.com/bdvarsity/?view_public_for=105388988032309"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <a href="https://www.instagram.com/bdvarsity.info/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <a href="https://twitter.com/bdvarsity_info"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://twitter.com/bdvarsity_info" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/company/bdvarsity-info" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
    </div>
-   <p><h4><a href="about.html">About </a></p><a href="privacy.html"> Privacy Policy</a></p>
+   <p><h4><a href="about.html">About </a></p><a href="privacy-policy.html"> Privacy Policy</a></p>
    Copyright © 2020 bdvarsity | All Rights Reserved </h4>
 </footer>
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
 
+ <script>
+          let nav = document.querySelector('nav');
+          let dropdown = nav.querySelector('.dropdown');
+          let dropdownToggle = nav.querySelector("[data-action='dropdown-toggle']");
+          let navToggle = nav.querySelector("[data-action='nav-toggle']");
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+          navToggle.addEventListener('click', () => {
+            if (nav.classList.contains('opened')) {
+              nav.classList.remove('opened');
+            } else {
+              nav.classList.add('opened');
+            }
+          })
+          sn.addEventListener('click', () => {
+            if (nav.classList.contains('opened')) {
+              nav.classList.remove('opened');
+            } else {
+              nav.classList.add('opened');
+            }
+          })
+          crn.addEventListener('click', () => {
+            if (nav.classList.contains('opened')) {
+              nav.classList.remove('opened');
+            } else {
+              nav.classList.add('opened');
+            }
+          })
+          sch.addEventListener('click', () => {
+            if (nav.classList.contains('opened')) {
+              nav.classList.remove('opened');
+            } else {
+              nav.classList.add('opened');
+            }
+          })
+		  hta.addEventListener('click', () => {
+            if (nav.classList.contains('opened')) {
+              nav.classList.remove('opened');
+            } else {
+              nav.classList.add('opened');
+            }
+          })
+          req.addEventListener('click', () => {
+            if (nav.classList.contains('opened')) {
+              nav.classList.remove('opened');
+            } else {
+              nav.classList.add('opened');
+            }
+          })
+          syl.addEventListener('click', () => {
+            if (nav.classList.contains('opened')) {
+              nav.classList.remove('opened');
+            } else {
+              nav.classList.add('opened');
+            }
+          })
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+        </script>
 
 <script>
 var acc = document.getElementsByClassName("accordion");
@@ -1577,6 +1695,30 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
+
+<i class="fa fa-arrow-up w3-margin-right" onclick="topFunction()" id="myBtns" title="Go to top"></i>
+
+        <script>
+          //Get the button
+          var mybutton = document.getElementById("myBtns");
+
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function () { scrollFunction() };
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+        </script>
 
 </body>
 </html>
