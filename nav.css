@@ -43,6 +43,7 @@ nav .nav-item > a {
 }
 nav .dropdown {
 	position: relative;
+	cursor: pointer;
 }
 nav .dropdown a::after {
 	content: '';

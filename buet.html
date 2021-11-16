@@ -42,14 +42,12 @@ body, html {
 }
 
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   line-height: 1.8;
 }
 
 	table.a {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: auto;
   line-height: 1.8;
@@ -295,6 +293,18 @@ a{
   background-color: red;
 }
   
+ .notice-result{
+      background-color: yellow;
+	  border-radius: 10px;
+	  padding-left: 5px;
+	  padding-right: 5px;
+}
+.scroll-box{
+      height: 450px;
+	  overflow-y: scroll;
+	  overflow-x: hidden;
+} 
+  
 </style>
 </head>
 <body>
@@ -350,7 +360,7 @@ a{
 
   <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong><center>Last Update Date: 20/06/2021</center></strong>
+  <strong><center>Last Update Date: 01/08/2021</center></strong>
 </div>
 
 <div class="w3-container" style="padding:128px 16px" id="Circular"><header>
@@ -376,18 +386,27 @@ a{
 	</th></tr><tr class = "a">
 	<td>
 	
-
+  <div class="w3-responsive">
+  <div class="scroll-box">
   <div class="row-notice">
+  
+    <div class="column-notice">
+    <div class="card-notice">
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 2021-07-10 00:22:05 &nbsp; <span class="notice-result">@notice</span></h6>
+      <p><b><font color="#FF0000">বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়ে ২০২০-২০২১ শিক্ষাবর্ষে স্নাতক শ্রেণীতে ভর্তির নিমিত্তে অনুষ্ঠিতব্য প্রাক-নির্বাচনী পরীক্ষা এবং চূড়ান্ত ভর্তি পরীক্ষা স্থগিত করা হয়েছে। প্রাক-নির্বাচনী এবং চূড়ান্ত ভর্তি পরীক্ষার তারিখ পরবর্তী সময়ে প্রাক-নির্বাচনী পরীক্ষার ন্যূনতম ১০ দিন পূর্বে ঘোষণা করা হবে।</font></b></p>
+    </div>
+  </div>
+  
   <div class="column-notice">
     <div class="card-notice">
-      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 2021-05-01 00:22:05</h6>
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 2021-05-01 00:22:05 &nbsp; <span class="notice-result">@notice</span></h6>
       <p><b><font color="#FF0000">বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়ে ২০২০-২০২১ শিক্ষাবর্ষে/সেশনে লেভেল-১, টার্ম-১-এ ছাত্র/ছাত্রী ভর্তির নিমিত্তে প্রাক-নির্বাচনী পরীক্ষা ৩১ মে ও ১ জুন এর পরিবর্তে যথাক্রমে ৩০ জুন ও ১ জুলাই এবং চূড়ান্ত ভর্তি পরীক্ষা ১০ জুন এর পরিবর্তে ১০ জুলাই অনুষ্ঠিত হবে। </font>   </b></p>
     </div>
   </div>
 
   <div class="column-notice">
     <div class="card-notice">
-      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 2021-05-01 00:22:05</h6>
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 2021-05-01 00:22:05 &nbsp; <span class="notice-result">@result</span></h6>
 	  <a href="http://ugadmission.buet.ac.bd/Notice_2020/shift_4_by_serial.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Shift - 4</button></a>
 	  <a href="http://ugadmission.buet.ac.bd/Notice_2020/shift_3_by_serial.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Shift - 3</button></a>
 	  <a href="http://ugadmission.buet.ac.bd/Notice_2020/shift_2_by_serial.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Shift - 2 </button></a>
@@ -396,6 +415,8 @@ a{
     </div>
   </div>
   
+</div>
+</div>
 </div>
 
     </td>

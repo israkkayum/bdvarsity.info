@@ -53,7 +53,6 @@ body, html {
 }
 
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   line-height: 1.8;
@@ -174,6 +173,7 @@ ul {
   font-size: 15px;
   float: right;
   margin: 5px;
+  border-radius: 5px;
 }
 
 /* Darker background on mouse-over */
@@ -228,6 +228,18 @@ a{
    text-decoration: none;
 }
 
+ .notice-result{
+      background-color: yellow;
+	  border-radius: 10px;
+	  padding-left: 5px;
+	  padding-right: 5px;
+}
+.scroll-box{
+      height: 500px;
+	  overflow-y: scroll;
+	  overflow-x: hidden;
+}
+
 </style>
 </head>
 <body>
@@ -277,7 +289,7 @@ a{
 
   <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong><center>Last Update Date: 02/07/2021</center></strong>
+  <strong><center>Last Update Date: 10/08/2021</center></strong>
 </div>
 
 <div class="w3-container" style="padding:128px 16px" id="Cir"><header>
@@ -408,40 +420,73 @@ a{
 	<tr>
 	<td>
 	
+	    <div class="w3-responsive">
+       <div class="scroll-box">
 	  <div class="row-notice">
-  <div class="column-notice">
+	  
+	  	  <div class="column-notice">
     <div class="card-notice">
-      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 28-06-2021 00:22:05 &nbsp; @result</h6>
-	  <a href="https://joinbangladesharmy.army.mil.bd/upl/doc/news/vghnHE92lURp.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
-      <p>87th BMA Long Course Written Examination Result</p>
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 08-08-2021 &nbsp; <span class="notice-result">@notice</span></h6>
+      <p>৭৮তম ডিএসএসসি (এএমসি), ৬৫তম ডিএসএসসি (এডিসি), ৫৭তম বিএমএ স্পেশাল (ইঞ্জিনিয়ার্স/সিগন্যালস্/ইএমই/এইসি), ৩৫তম ডিএসএসসি (জেএজি) এবং ৫০তম ডিএসএসসি (আরভিএন্ডএফসি) কোর্সের লিখিত পরীক্ষা আগামী ১৩ আগস্ট ২০২১ তারিখে অনুষ্ঠিত হবে</p>
     </div>
   </div>
-
+	  
+	  <div class="column-notice">
+    <div class="card-notice">
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 03-08-2021 &nbsp; <span class="notice-result">@notice</span></h6>
+      <p>৭৮তম ডিএসএসসি (এএমসি), ৬৫তম ডিএসএসসি (এডিসি), ৫৭তম বিএমএ স্পেশাল (ইঞ্জিনিয়ার্স/সিগন্যালস্/ইএমই/এইসি), ৩৫তম ডিএসএসসি (জেএজি) এবং ৫০তম ডিএসএসসি (আরভিএন্ডএফসি) কোর্সের লিখিত পরীক্ষা স্থগিত</p>
+    </div>
+  </div>
+	  
+	    <div class="column-notice">
+    <div class="card-notice">
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 02-08-2021 &nbsp; <span class="notice-result">@notice</span></h6>
+	  <a href="https://joinbangladesharmy.army.mil.bd/upl/doc/news/2YEcG1MuUtbn.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
+      <p>Candidate List of 86th to 87th BMA Long Course</p>
+    </div>
+  </div>
+  
+  
   <div class="column-notice">
     <div class="card-notice">
-      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 01-06-2021 00:22:05  &nbsp; @notice</h6>
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 08-07-2021 &nbsp; <span class="notice-result">@notice</span></h6>
 	  <a href="https://joinbangladesharmy.army.mil.bd/upl/doc/news/ziISBg82N1Ha.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
       <p>২৭তম ডিএসএসসি (স্পেশাল পারপাস) এএমসি কোর্সের প্রাথমিক স্বাস্থ্য ও মৌখিক পরীক্ষার সংশোধিত সময়সূচি</p>
     </div>
   </div>
   
+      <div class="column-notice">
+    <div class="card-notice">
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 03-07-2021 &nbsp; <span class="notice-result">@notice</span></h6>
+      <p>২৭তম ডিএসএসসি (স্পেশাল পারপাস) এএমসি কোর্সের প্রাথমিক স্বাস্থ্য ও মৌখিক পরীক্ষা স্থগিত</p>
+    </div>
+  </div>
+	  
+  <div class="column-notice">
+    <div class="card-notice">
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 28-06-2021 &nbsp; <span class="notice-result">@result</span></h6>
+	  <a href="https://joinbangladesharmy.army.mil.bd/upl/doc/news/vghnHE92lURp.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
+      <p>87th BMA Long Course Written Examination Result</p>
+    </div>
+  </div>
+  
     <div class="column-notice">
     <div class="card-notice">
-      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 22-04-2021 00:22:05  &nbsp; @result</h6>
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 22-04-2021 &nbsp; <span class="notice-result">@notice</span></h6>
 	  <a href="https://joinbangladesharmy.army.mil.bd/upl/doc/news/4zuJ0LVxTk6Y.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
       <p>৫৬তম বিএমএ স্পেশাল (ইঞ্জিনিয়ার্স/সিগন্যালস্/ইএমই/এইসি), ৩৪তম ডিএসএসসি (জেএজি) এবং ৪৯তম ডিএসএসসি (আরভিএন্ডএফসি) কোর্সের প্রাথমিক স্বাস্থ্য ও মৌখিক পরীক্ষার ফলাফল</p>
     </div>
   </div>
-  <span id="dots"></span><span id="more">
     <div class="column-notice">
     <div class="card-notice">
-      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 11-04-2021 00:22:05  &nbsp; @notice</h6>
+      <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 11-04-2021 &nbsp; <span class="notice-result">@notice</span></h6>
 	  <a href="https://joinbangladesharmy.army.mil.bd/upl/doc/news/QM9UKn6sevBH.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
       <p>৫৬তম বিএমএ স্পেশাল (ইঞ্জিনিয়ার্স/সিগন্যালস্/ইএমই/এইসি), ৩৪তম ডিএসএসসি (জেএজি) এবং ৪৯তম ডিএসএসসি (আরভিএন্ডএফসি) কোর্সের প্রাথমিক স্বাস্থ্য ও মৌখিক পরীক্ষার সময়সূচি সংশোধন</p>
     </div>
   </div>
-  </span><p><center><button onclick="myFunction()" id="myBtn"><i class="fa fa-arrow-down w3-margin-right"></i>Show more</button></center></p>
   
+</div>
+</div>
 </div>
 	
 	</td>
@@ -1357,24 +1402,6 @@ sd.addEventListener('click', () => {
 		nav.classList.add('opened');
 	}
 })
-</script>
-
-<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Show more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Show less"; 
-    moreText.style.display = "inline";
-  }
-}
 </script>
 
 <i class="fa fa-arrow-up w3-margin-right" onclick="topFunction()" id="myBtns" title="Go to top"></i>
