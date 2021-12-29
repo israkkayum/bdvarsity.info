@@ -25,6 +25,7 @@ font-family: 'Poppins', sans-serif;
 body, html {
   height: 100%;
   line-height: 1.8;
+  scroll-behavior: smooth;
 }
 
 /* Full height image header */
@@ -84,12 +85,18 @@ body, html {
 table {
   border-collapse: collapse;
   line-height: 1.8;
-  width: auto;
+  width: 100%;
 }
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
+  padding: 8px;
+}
+
+td.a {
+   border: 1px solid #dddddd;
+  text-align: center;
   padding: 8px;
 }
 
@@ -135,6 +142,12 @@ tr:nth-child(even) {
   border: 1px solid #ccc;
   border-top: none;
 }
+.tabcontent-airman {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
 
 .accordion{
   background-color: #eee;
@@ -174,6 +187,124 @@ tr:nth-child(even) {
   transition: max-height 0.2s ease-out;
 }
 
+* {
+ box-sizing: border-box;
+}
+
+li.a{
+  float: left;
+  margin: 5 20px;
+}
+
+ul {
+  list-style: disc;
+}
+
+
+/* Float four columns side by side */
+.column-notice {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-notice {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row-notice:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column-notice {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+/* Style the counter cards */
+.card-notice {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+}
+  
+  .btn {
+  background-color: #990000;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  float: right;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: red;
+}
+
+#more {display: none;}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}  
+
+#myBtns {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #990000;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtns:hover {
+  background-color: red;
+}
+
+.notice-result{
+      background-color: yellow;
+	  border-radius: 10px;
+	  padding-left: 5px;
+	  padding-right: 5px;
+}
+.scroll-box{
+    height: 500px;
+	  overflow-y: scroll;
+	  overflow-x: hidden;
+}
+
 </style>
 </head>
 <body>
@@ -201,14 +332,9 @@ tr:nth-child(even) {
 						<li class="nav-item dropdown">
 				<a data-action="dropdown-toggle">Requirement</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#R1" id="r1">78th DSSC (AMC)</a>
-					<a class="dropdown-item" href="#R2" id="r2">65th DSSC (ADC)</a>
-					<a class="dropdown-item" href="#R3" id="r3">50th DSSC (RV&FC)</a>
-					<a class="dropdown-item" href="#R4" id="r4">35th DSSC (JAG)</a>
-					<a class="dropdown-item" href="#R5" id="r5">57th BMA Special Course (Engineers)</a>
-					<a class="dropdown-item" href="#R6" id="r6">57th BMA Special Course (Signals)</a>
-					<a class="dropdown-item" href="#R7" id="r7">57th BMA Special Course (EME)</a>
-					<a class="dropdown-item" href="#R8" id="r8">57th BMA Special Course (AEC)</a>
+					<a class="dropdown-item" href="#R1" id="r1">Officer Cadet</a>
+					<a class="dropdown-item" href="#R2" id="r2">Airmen (Rect)</a>
+					<a class="dropdown-item" href="#R3" id="r3">MODC Air (Rect)</a>
 				</div>
 			</li>
 			<li class="nav-item"><a href="#Nr" id="nr">Notice / Result</a></li>
@@ -220,24 +346,26 @@ tr:nth-child(even) {
 
 
 <!-- Image of location/map -->
-    <img src="https://joinairforce.baf.mil.bd/assets/frontend/img/page/top_carrer.jpg" class="w3-image w3-" style="width:100%;margin-top:0px">
+    <img src="https://joinairforce.baf.mil.bd/assets/frontend/img/page/top_carrer.jpg" class="w3-image w3-" id="home" style="width:100%;margin-top:0px">
   </div>
 </div>
 
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h1 class="w3-center"><b><font color="#990000">Bangladesh Air Force Join/Admission Information 2020-2021</font></b></h1>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong><center>Last Update Date: 29/12/2021</center></strong>
+</div>
+
+<div class="w3-container" style="padding:128px 16px" id="Cir">
+  <h1 class="w3-center"><b><font color="#990000">Bangladesh Air Force Join/Admission Information 2020-2021</font></b></h1><hr style="">
   <div class="w3-row-padding w3-" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <div class="col-5" align="center"><br>
-<a class="button3"><img class="img-fluid" src="https://joinairforce.baf.mil.bd/assets/frontend/img/logo.png" style="width: 150px; height: 150px; border-radius:50%; border: 1px solid #2B325355;"></a>
-</div><br><hr style="">
-        <div class="w3-container">
-          <center><b><font color="#990000"><h4>Officer Cadet</h4></font></center>
-          <p><a href="https://joinairforce.baf.mil.bd/circular"<button class="w3-button w3-light-grey w3-block">Click Here For Circular Download</button></p></a>
-		  <p><a href="https://joinairforce.baf.mil.bd/apply"<button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
-		  <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
-        </div>
+          <div class="col-5" align="center"><br>
+            <a class="button3"><img class="img-fluid" src="https://joinairforce.baf.mil.bd/assets/frontend/img/logo.png" style="width: 150px; height: 150px; border-radius:50%; border: 1px solid #2B325355;"></a>
+          </div><br><hr style="">
+          <div class="w3-container">
+            <center><b><font color="#990000"><h4>Officer Cadet</h4></font></center>
+            <p><a href="https://joinairforce.baf.mil.bd/core/resources/views/frontend/image/86-BAFA.jpg" target="_blank"><button class="w3-button w3-light-grey w3-block cir">Click Here For Circular Download</button></p></a>          </div>
       </div>
     </div>
 	
@@ -248,12 +376,11 @@ tr:nth-child(even) {
 </div><br><hr style="">
         <div class="w3-container">
           <center><b><font color="#990000"><h4>Airmen (Rect)</h4></font></center>
-          <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block">Click Here For Circular Download</button></p></a>
-		  <p><a href="https://joinairforce.baf.mil.bd/apply"<button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
-		  <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
+          <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block cir">Click Here For Circular Download</button></p></a>
         </div>
       </div>
     </div>
+
 	
 	<div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
@@ -262,43 +389,136 @@ tr:nth-child(even) {
 </div><br><hr style="">
         <div class="w3-container">
           <center><b><font color="#990000"><h4>MODC Air (Rect)</h4></font></center>
-          <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block">Click Here For Circular Download</button></p></a>
-		  <p><a href="https://joinairforce.baf.mil.bd/apply"<button class="w3-button w3-light-grey w3-block">Website For Online Application</button></p></a>
-		  <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block">Click Here For Result</button></p></b></a>
+          <p><a href="soon.html"<button class="w3-button w3-light-grey w3-block cir">Click Here For Circular Download</button></p></a>
         </div>
       </div>
     </div>
-		<center> <b> <h2><font color="#990000"> News </font> </h2></b></center>
-		<center>
-	<p>
-<table>
-  <tr>
-    <th>Course Name/Category</th>
-    <th>Apply Deadline</th>
-  </tr>
-  <tr>
-    <td><b><font color="#0000FF">84th BAFA Course</font></b></td>
-    <td><b><font color="#008000">Starts: 20 November 2020</font></b><br>
-        <p><b><font color="#FF0000">Ends: 08 March 2021</font></b></td></p>
-</table>
-	</p>
-	</center><p>
-	<center>
-	<p>
-<table>
-  <tr>
-    <th>Course Name/Category</th>
-    <th>Apply Deadline</th>
-  </tr>
-  <tr>
-    <td><b><font color="#0000FF">85th BAFA Course</font></b></td>
-    <td><b><font color="#008000">Starts: 20 November 2020</font></b><br>
-        <p><b><font color="#FF0000">Ends: 28 April 2021</font></b></td></p>
-</table>
-	</p>
-	</center></p>
    </div>
   </div>
+
+  <center>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- ad 1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5211135461694979"
+         data-ad-slot="1053901108"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </center>
+
+  <div class="w3-container" style="padding:128px 16px" id="Sd">
+    <h3 class="w3-center"><b><font color="#990000"># Application Deadline, Admission Exam Date and Schedule # </font></b></h3>
+    <div class="w3-row-padding w3-" style="margin-top:64px">
+
+      <div class="w3-responsive">
+        <center>
+        <p>
+      <table>
+        <tr>
+          <th colspan="2"><center>Course Name/Category</center></th>
+          <th><center>Registration Fees</center></th>
+          <th><center>Apply Deadline</center></th>
+        <th>  </th>
+        </tr>
+        <tr>
+          <td colspan="2"><b><font color="#0000FF"> BAFA - 86 </font></b></td>
+          <td class="a"><b><font color="#FF0000">1000 BDT</font></b></td>
+          <td class="a"><b><font color="#008000">Starts: 26 October 2021</font></b><br>
+              <p><b><font color="#FF0000">Ends: 27 February 2022</font></b><br></p></td>
+          <td><a href="https://joinairforce.baf.mil.bd/apply" target="_blank"><center><button class="btn"><i class="fa fa-graduation-cap"></i> Apply Now </button></center></a></td>
+        </tr>
+      </table>
+        </p>
+        </center>
+        </div>
+  
+    </div>
+  </div>
+
+  <center>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- ad 1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5211135461694979"
+         data-ad-slot="1053901108"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </center>
+  
+   
+  <div class="w3-container" style="padding:128px 30px" id="Nr">
+    <h2 class="w3-center"><b><font color="#990000"># Notices / Results #</font></b></h2>
+    <div class="w3-row-padding w3-" style="margin-top:64px">
+  
+  <center>
+    <table>
+    <tr>
+    <td>
+    
+        <div class="w3-responsive">
+         <div class="scroll-box">
+      <div class="row-notice">
+      
+        <div class="column-notice">
+      <div class="card-notice">
+        <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 00-00-2021 &nbsp; <span class="notice-result">@notice</span></h6>
+      <a href="https://joinairforce.baf.mil.bd/core/resources/views/frontend/image/Revised_Exam_Schedule_of_Airmen_Entry_No-50.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
+        <p>Airmen Entry No - 50, Exam Schedule – 2021 (Male)</p>
+      </div>
+    </div>
+    
+    
+    <div class="column-notice">
+      <div class="card-notice">
+        <h6><i class="fa fa-clock-o m-r-10"></i> 	&nbsp; 19-09-2021 &nbsp; <span class="notice-result">@result</span></h6>
+      <a href="https://joinairforce.baf.mil.bd/core/public/modc_result/MODC_AIR_Entry_No_49.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download </button></a>
+        <p>List of 50 selected candidates: MODC (AIR) Rect: Entry no-49</p>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+  </div>
+    
+    </td>
+    </tr>
+    </table>
+      </center>
+    
+    </div>
+    </div>
+
+    <center>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- ad 1 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5211135461694979"
+           data-ad-slot="1053901108"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></center>
+
+
+<div class="w3-container" style="padding:128px 32px" id="Htp">
+  <h2 class="w3-center"><b><font color="#990000"># How to Apply #</font></b></h2>
+  <div class="w3-row-padding w3-" style="margin-top:64px">
+
+    <iframe style="margin-right: 1%; margin-left: 1%;" width="98%" height="60%" src="https://www.youtube.com/embed/EFq2n2WVnrk" frameborder="0"></iframe>
+
+
+ </div>
+</div>  
   
   <center>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -313,7 +533,7 @@ tr:nth-child(even) {
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></center>
   
- <div class="w3-container" style="padding:128px 16px" id="team">
+ <div class="w3-container" style="padding:128px 16px" id="R1">
  <h2 class="w3-center"><b><font color="#990000"># REQUIREMENT OF BAF OFFICER CADETS #</font></b></h2>
  <div class="w3-row-padding w3-" style="margin-top:64px">
  
@@ -704,28 +924,373 @@ services including radar services for the conduct of air operation in most effec
 </div>
 
 <div id="defence" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  
+     <center><h3 style="margin-top: 50px; color: #990000"><b>AIR DEFENCE WEAPONS CONTROLLERS (ADWC) BRANCH</b></h3>
+  <p>Air Defence Weapons Controllers are responsible for conducting air defence operations to prevent
+hostile aircraft and missiles from inflicting any critical damage which may jeopardize nation’s survival;
+and conduct effective airspace management over Bangladesh airspace.</p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 4.5 with minimum letter Grade ‘A’ in Physics and Mathematics both in SSC and HSC for BAFA Course; or</li>
+	 <li>You must have minimum Grade ‘B’ in 05 subjects including minimum Grade ‘B’ in Physics and Mathematics in O Level; and minimum Grade ‘B’ in Physics and Mathematics in A Level for BAFA Course; or</li>
+	 <li>You must meet the above-mentioned educational qualifications and must have minimum CGPA 3.00 out of 4.00 in B Sc with Physics or Mathematics for Direct Entry (DE) course.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16½ and 22 years (without affidavit) for BAFA Course.</li>
+  <li>Your age must be between 20 and 30 years (without affidavit) for Direct Entry (DE) course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced) for BAFA Course.</li>
+  <li>You must be unmarried/married for Direct Entry (DE) course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64” (for male) and minimum 62” (for female).</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 32” (for male) and minimum 28” (for female).</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must conform to existing medical standards of Bangladesh Air Force.</li>
+  <li>You must not have undergone refractive surgery before attaining 19 years of age.</li>
+  <li>If you are female, your pregnancy test result must be negative and there should be no sign of pregnancy.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Twice screened out or rejected by Inter Services Selection Board (ISSB) (once screened out and once rejected candidates may apply). However, 5 (five) years after last rejection by ISSB, a candidate may apply for Direct Entry course.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li> Rejected by Central Medical Board (CMB, BAF) or Appeal Medical Board.</li>
+  </ul>
+  </p>
+</div>
+  
 </div>
 
 <div id="education" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>EDUCATION BRANCH</b></h3>
+  <p>Education Branch officers are responsible for providing instructional and educational
+services for the career development of all personnel of Air Force.</p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum CGPA- 3.00 out of 4.00 in required discipline in both Bachelor’s Degree with Honours and Master’s Degree for Direct Entry (DE) course.</li>
+	 <li> You must have educational qualifications as per circular of Bangladesh Air Force for Special Purpose Short Service Commission (SPSSC) course.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 20 and 30 years (without affidavit) for Direct Entry (DE) course.</li>
+  <li>Your age must be between 21 and 40 years (without affidavit) for Special Purpose Short Service Commission (SPSSC) course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried/married.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64” (for male) and minimum 62” (for female).</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 32” (for male) and minimum 28” (for female).</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must conform to existing medical standards of Bangladesh Air Force.</li>
+  <li>You must not have undergone refractive surgery before attaining 19 years of age.</li>
+  <li>If you are female, your pregnancy test result must be negative and there should be no sign of pregnancy.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Twice screened out or rejected by Inter Services Selection Board (ISSB) (once screened out and once rejected candidates may apply). However, 5 (five) years after last rejection by ISSB, a candidate may apply for Direct Entry course.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li> Rejected by Central Medical Board (CMB, BAF) or Appeal Medical Board.</li>
+  </ul>
+  </p>
+</div>
+  
 </div>
 
 <div id="legal" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  
+    <center><h3 style="margin-top: 50px; color: #990000"><b>LEGAL BRANCH</b></h3>
+  <p>Legal Officers are qualified solicitors who advise the personnel and organization
+on legal challenges relating to operational and support activities of Air Force.</p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum CGPA- 3.00 out of 4.00 both in Bachelor’s Degree with Honours in Law and Master’s Degree in Law.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16½ and 22 years (without affidavit) for BAFA Course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried/married.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64” (for male) and minimum 62” (for female).</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 32” (for male) and minimum 28” (for female).</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must conform to existing medical standards of Bangladesh Air Force.</li>
+  <li>You must not have undergone refractive surgery before attaining 19 years of age.</li>
+  <li>If you are female, your pregnancy test result must be negative and there should be no sign of pregnancy.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Twice screened out or rejected by Inter Services Selection Board (ISSB) (once screened out and once rejected candidates may apply). However, 5 (five) years after last rejection by ISSB, a candidate may apply for Direct Entry course.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li> Rejected by Central Medical Board (CMB, BAF) or Appeal Medical Board.</li>
+  </ul>
+  </p>
+</div>
+  
 </div>
 
 <div id="finance" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  
+   <center><h3 style="margin-top: 50px; color: #990000"><b>FINANCE BRANCH</b></h3>
+  <p>Finance officers are responsible for financial management for all operational and support activities of Air Force.</p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 4.5 with minimum letter Grade ‘A’ in Mathematics or Accounting both in SSC and HSC for BAFA Course; or</li>
+	 <li>You must have minimum Grade ‘B’ in 05 subjects including minimum Grade ‘B’ in Mathematics or Accounting in O Level; and minimum Grade ‘B’ in Mathematics or Accounting in A Level for BAFA Course; or</li>
+	 <li>You must meet the above-mentioned educational qualifications and must have minimum CGPA 3.00 out of 4.00 in B Com for Direct Entry (DE) course.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16½ and 22 years (without affidavit) for BAFA Course.</li>
+  <li>Your age must be between 20 and 30 years (without affidavit) for Direct Entry (DE) course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced) for BAFA Course.</li>
+  <li>You must be unmarried/married for Direct Entry (DE) course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64” (for male) and minimum 62” (for female).</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 32” (for male) and minimum 28” (for female).</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must conform to existing medical standards of Bangladesh Air Force.</li>
+  <li>You must not have undergone refractive surgery before attaining 19 years of age.</li>
+  <li>If you are female, your pregnancy test result must be negative and there should be no sign of pregnancy.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Twice screened out or rejected by Inter Services Selection Board (ISSB) (once screened out and once rejected candidates may apply). However, 5 (five) years after last rejection by ISSB, a candidate may apply for Direct Entry course.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li> Rejected by Central Medical Board (CMB, BAF) or Appeal Medical Board.</li>
+  </ul>
+  </p>
+</div>
+  
 </div>
 
 <div id="meteorological" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>METEOROLOGICAL BRANCH</b></h3>
+  <p>Meteorological officers are responsible for providing day to day current weather information
+and forecast for safe and effective air operations; short, medium and long range forecast for
+future air operation planning and warning/signal as precaution for air and ground activities.</p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 4.5 with minimum letter Grade ‘A’ in Physics and Mathematics both in SSC and HSC for BAFA Course; or</li>
+	 <li>You must have minimum Grade ‘B’ in 05 subjects including minimum Grade ‘B’ in Physics and Mathematics in O Level; and minimum Grade ‘B’ in Physics and Mathematics in A Level for BAFA Course; or</li>
+	 <li>You must meet the above-mentioned educational qualifications and must have minimum CGPA 3.00 out of 4.00 in B Sc with Physics or Mathematics.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16½ and 22 years (without affidavit) for BAFA Course.</li>
+  <li>Your age must be between 20 and 30 years (without affidavit) for Direct Entry (DE) course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced) for BAFA Course.</li>
+  <li>You must be unmarried/married for Direct Entry (DE) course.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64” (for male) and minimum 62” (for female).</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 32” (for male) and minimum 28” (for female).</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must conform to existing medical standards of Bangladesh Air Force.</li>
+  <li>You must not have undergone refractive surgery before attaining 19 years of age.</li>
+  <li>If you are female, your pregnancy test result must be negative and there should be no sign of pregnancy.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Twice screened out or rejected by Inter Services Selection Board (ISSB) (once screened out and once rejected candidates may apply). However, 5 (five) years after last rejection by ISSB, a candidate may apply for Direct Entry course.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li> Rejected by Central Medical Board (CMB, BAF) or Appeal Medical Board.</li>
+  </ul>
+  </p>
+</div>
+  
 </div>
  
 </div>
@@ -744,11 +1309,913 @@ services including radar services for the conduct of air operation in most effec
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></center>
   
-<div class="w3-container" style="padding:128px 16px" id="team">
+<div class="w3-container" style="padding:128px 16px" id="R2">
 <h2 class="w3-center"><b><font color="#990000"># REQUIREMENT OF BAF AIRMAN #</font></b></h2>
 <div class="w3-row-padding w3-" style="margin-top:64px">
 
-               
+   <div class="tab">
+  <button class="tablinks-airman" onclick="openAirman(event, 'technical')" id="defaultOpen2">TECHNICAL</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'it-assistant')">INFORMATION TECHNOLOGY (IT) ASSISTANT</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'mtof')">MECHANICAL TRANSPORT OPERATOR AND FITTER (MTOF)</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'medical-assistant')">MEDICAL ASSISTANT</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'physical-fitness')">PHYSICAL FITNESS AND DRILL INSTRUCTOR (PF&DI)</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'ground')">GROUND COMBATEERS (GC)</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'provost')">PROVOST</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'non-technical')">NON-TECHNICAL</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'non-technical-player')">NON-TECHNICAL (PLAYER)</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'musician')">MUSICIAN</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'cypher')">CYPHER ASSISTANT</button>
+  <button class="tablinks-airman" onclick="openAirman(event, 'education-instructor')">EDUCATION INSTRUCTOR</button>
+</div>
+
+<div id="technical" class="tabcontent-airman">
+  <center><h3 style="margin-top: 50px; color: #990000"><b>TECHNICAL TRADE</b></h3>
+  <p>Technical trade’ is a group of 11 trades of BAF Technicians namely Airframe Fitter, Engine Fitter, Electrical and
+    Instrument Fitter, Radio Fitter, Armament Fitter, General Engineering, Ground Signaling, Radar Operator, Air Traffic
+    Control Assistant, Meteorological Assistant and Logistic Assistant trade.
+    
+    </p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.5 in SSC (Science) or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+    <ul>
+	 <li>Candidates having course completion certificate from Technical Training Institutes will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+
+</div>
+
+<div id="it-assistant" class="tabcontent-airman">
+   
+   <center><h3 style="margin-top: 50px; color: #990000"><b>INFORMATION TECHNOLOGY (IT) ASSISTANT TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.5 in SSC (Science) or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>Candidates having course completion certificate from Technical Training Institutes and having experience in IT will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+   
+</div>
+
+<div id="mtof" class="tabcontent-airman">
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>MECHANICAL TRANSPORT OPERATOR AND FITTER (MTOF)</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.0 in SSC or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>Candidates having driving license and experience of driving light or medium vehicle will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 24 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
+
+<div id="medical-assistant" class="tabcontent-airman">
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>MEDICAL ASSISTANT TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have educational qualifications as per circular of Bangladesh Air Force.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>Candidates having successfully completed 4-year long Medical Assistant Training Course (MATC) from government approved Medical Assistant Training School (MATS) will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+
+</div>
+
+<div id="physical-fitness" class="tabcontent-airman">
+   
+   <center><h3 style="margin-top: 50px; color: #990000"><b>PHYSICAL FITNESS AND DRILL INSTRUCTOR (PF&DI) TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.5 in SSC or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+    <ul>
+	 <li>Candidates having expertise in games & sports; smart turnout & bearing and clear vocal ability will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 68”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+   
+</div>
+
+<div id="ground" class="tabcontent-airman">
+  
+     <center><h3 style="margin-top: 50px; color: #990000"><b>GROUND COMBATEERS (GC) TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.5 in SSC or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>Candidates having smart turnout & bearing will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 68”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
+
+<div id="provost" class="tabcontent-airman">
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>PROVOST TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.5 in SSC or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>Candidates having smart turnout & bearing will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 68”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
+
+<div id="non-technical" class="tabcontent-airman">
+  
+    <center><h3 style="margin-top: 50px; color: #990000"><b>NON-TECHNICAL TRADE</b></h3>
+  <p>Non-Technical trade’ is a group of 3 trades of BAF Technicians namely Secretarial Assistant (General Duties), Secretarial Assistant (Accounts) and Administrative Assistant trade.</p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.5 in SSC or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 68”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li> Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
+
+<div id="non-technical-player" class="tabcontent-airman">
+  
+   <center><h3 style="margin-top: 50px; color: #990000"><b>NON-TECHNICAL (PLAYER) TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>You must have minimum GPA 3.5 in SSC or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+     <ul>
+	 <li>Candidates having experience of participating in international or national or district level sports or athletics tournament will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 21 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 68”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
+
+<div id="musician" class="tabcontent-airman">
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>MUSICIAN TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+   <ul>
+	 <li>You must have minimum GPA 2.5 in SSC or equivalent public examination.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Other Qualifications</button>
+<div class="panel">
+  <p>
+   <ul>
+	 <li>You must have reasonably sound knowledge on music or melody.</li>
+	 <li>Candidates having expertise in playing musical instruments (keyboard, guitar, violin, flute, tabla, jazz, pad, drum etc) or having successfully completed course from Shilpakala Academy, Nazrul Academy or government approved any music school will be given preference.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 26 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be unmarried (not divorced).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
+
+<div id="cypher" class="tabcontent-airman">
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>CYPHER ASSISTANT TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+   <ul>
+	 <li>You must have minimum CGPA 2.5 in B Sc/B Com/BA from a recognized university; or</li>
+   <li>You must have educational qualification as per circular of Bangladesh Air Force.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 28 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be married/unmarried.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
+
+<div id="education-instructor" class="tabcontent-airman">
+  
+  <center><h3 style="margin-top: 50px; color: #990000"><b>EDUCATION INSTRUCTOR TRADE</b></h3>
+  <p></p></center>
+
+<button class="accordion">Educational Qualifications</button>
+<div class="panel">
+  <p>
+   <ul>
+	 <li>You must have minimum CGPA 2.5 in B Sc/B Com/BA with subjects as per required discipline from a recognized university.</li>
+	 </ul>
+  </p>
+</div>
+
+<button class="accordion">Nationality</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be Bangladeshi by birth.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Age</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your age must be between 16 and 28 years (without affidavit).</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Marital Status</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>You must be married/unmarried.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Physical Standards</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Your height must be minimum 64”.</li>
+  <li>Your weight must be according to age and height chart of BAF.</li>
+  <li>Your chest must be minimum 30”.</li>
+  <li>Your chest expansion must be minimum 2”.</li>
+  <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+  </ul>
+  </p>
+</div>
+
+<button class="accordion">Disqualifying Factors</button>
+<div class="panel">
+  <p>
+  <ul>
+  <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+  <li>Convicted by Court of Law for any criminal offence.</li>
+  <li>Declared unfit for government service.</li>
+  </ul>
+  </p>
+</div>
+  
+</div>
 
 </div>
 </div>
@@ -767,10 +2234,70 @@ services including radar services for the conduct of air operation in most effec
 </script></center>
 
 
-<div class="w3-container" style="padding:128px 16px" id="team">
-<h2 class="w3-center"><b><font color="#990000"># REQUIREMENT OF BAF MODC #</font></b></h2>
+<div class="w3-container" style="padding:128px 16px" id="R3">
+<h2 class="w3-center"><b><font color="#990000"># REQUIREMENT OF BAF MODC (Air) RECRUIT#</font></b></h2>
 <div class="w3-row-padding w3-" style="margin-top:64px">
-
+  
+  <button class="accordion">Educational Qualifications</button>
+  <div class="panel">
+    <p>
+       <ul>
+     <li> You must have minimum GPA 2.0 in SSC or equivalent public examination. </li>
+     </ul>
+    </p>
+  </div>
+  
+  <button class="accordion">Nationality</button>
+  <div class="panel">
+    <p>
+    <ul>
+    <li>You must be Bangladeshi by birth.</li>
+    </ul>
+    </p>
+  </div>
+  
+  <button class="accordion">Age</button>
+  <div class="panel">
+    <p>
+    <ul>
+    <li>Your age must be between 16 and 21 years (without affidavit).</li>
+    </ul>
+    </p>
+  </div>
+  
+  <button class="accordion">Marital Status</button>
+  <div class="panel">
+    <p>
+    <ul>
+    <li>You must be unmarried (not divorced).</li>
+    </ul>
+    </p>
+  </div>
+  
+  <button class="accordion">Physical Standards</button>
+  <div class="panel">
+    <p>
+    <ul>
+    <li>Your height must be minimum 66”.</li>
+    <li>Your weight must be according to age and height chart of BAF.</li>
+    <li>Your chest must be minimum 30”.</li>
+    <li>Your chest expansion must be minimum 2”.</li>
+    <li>Your eyesight must be 6/6 for both eyes and must have normal vision in colour perception.</li>
+    </ul>
+    </p>
+  </div>
+  
+  <button class="accordion">Disqualifying Factors</button>
+  <div class="panel">
+    <p>
+    <ul>
+    <li>Withdrawn or discharged or voluntary retirement from Bangladesh Army or Bangladesh Navy or Bangladesh Air Force or any Government Service of Bangladesh.</li>
+    <li>Convicted by Court of Law for any criminal offence.</li>
+    <li>Declared unfit for government service.</li>
+    </ul>
+    </p>
+  </div>
+  
 
 </div>
 </div>
@@ -788,6 +2315,33 @@ services including radar services for the conduct of air operation in most effec
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></center></p>
+
+<div class="fb-comments" data-href="http://bdvarsity.info/airforce.html" data-width="100%" data-numposts="10"></div>
+ 
+ 
+<div class="w3-container w3-light-grey" style="padding: 10px 10px; margin: 10">
+         
+ <ul><b>
+   <li class="a"> join bangladesh air force	</li>
+   <li class="a"> join bangladesh air force circular 2021 </li>
+   <li class="a"> join bangladesh air force mil bd  </li>
+   <li class="a"> www join bangladesh air force mil bd </li>
+   <li class="a"> join bangladesh air force circular 2020 </li>
+   <li class="a"> www join bangladesh air force </li>
+   <li class="a"> join bangladesh air force apply	</li>
+   <li class="a"> join bangladesh air force circular </li>
+   <li class="a"> join bangladesh air force circular 2018 </li>
+   <li class="a"> bangladesh air force officer cadet circular 2018 </li>
+   <li class="a"> join bangladesh air force mil bd apply </li>
+   <li class="a"> joinairforce.baf.mil.bd </li>
+   <li class="a"> baf.mil.bd </li>
+   <li class="a"> requirement of baf officer cadet </li>
+   <li class="a"> requirement of bar airman  </li></b>
+   <li class="a"> requirement of bar modc air (rect) </li></b>
+   
+   </ul>
+     
+       </div>
 
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
@@ -823,7 +2377,7 @@ services including radar services for the conduct of air operation in most effec
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +8801993627604</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: support@bdvarsity.info</p>
     <br>
-    <form action="/action_page.php" target="_blank">
+    <form action="/information.php" target="_blank" method="post">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
@@ -837,17 +2391,17 @@ services including radar services for the conduct of air operation in most effec
   
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-  <a href="#team" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <a href="https://www.facebook.com/bdvarsity/?view_public_for=105388988032309"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/bdvarsity/?view_public_for=105388988032309" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/bdvarsity.info/" target ="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <a href="https://twitter.com/bdvarsity_info"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://twitter.com/bdvarsity_info" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/company/bdvarsity-info" target ="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
    </div>
-   <p><h4><a href="about.html">About </a></p><a href="privacy.html"> Privacy Policy</a></p>
-   Copyright © 2020 bdvarsity | All Rights Reserved </h4>
+   <p><h4><a href="http://israkkayum.ml" target="_blank">About </a></p><a href="privacy-policy.html"> Privacy Policy</a></p>
+   Copyright © 2022 bdvarsity | All Rights Reserved </h4>
 </footer>
 
 <script>
@@ -906,41 +2460,6 @@ r3.addEventListener('click', () => {
 		nav.classList.add('opened');
 	}
 })
-r4.addEventListener('click', () => {
-	if (nav.classList.contains('opened')) {
-		nav.classList.remove('opened');
-	} else {
-		nav.classList.add('opened');
-	}
-})
-r5.addEventListener('click', () => {
-	if (nav.classList.contains('opened')) {
-		nav.classList.remove('opened');
-	} else {
-		nav.classList.add('opened');
-	}
-})
-r6.addEventListener('click', () => {
-	if (nav.classList.contains('opened')) {
-		nav.classList.remove('opened');
-	} else {
-		nav.classList.add('opened');
-	}
-})
-r7.addEventListener('click', () => {
-	if (nav.classList.contains('opened')) {
-		nav.classList.remove('opened');
-	} else {
-		nav.classList.add('opened');
-	}
-})
-r8.addEventListener('click', () => {
-	if (nav.classList.contains('opened')) {
-		nav.classList.remove('opened');
-	} else {
-		nav.classList.add('opened');
-	}
-})
 nr.addEventListener('click', () => {
 	if (nav.classList.contains('opened')) {
 		nav.classList.remove('opened');
@@ -972,9 +2491,41 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = " block";
   evt.currentTarget.className += " active";
 }
+function openAirman(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active");
+  }
+  document.getElementById(cityName).style.display = " block";
+  evt.currentTarget.className += " active";
+}
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+function openAirman(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent-airman");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks-airman");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active");
+  }
+  document.getElementById(cityName).style.display = " block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen2").click();
 </script>
 
 <script>
@@ -991,6 +2542,30 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
   });
+}
+</script>
+
+<i class="fa fa-arrow-up w3-margin-right" onclick="topFunction()" id="myBtns" title="Go to top"></i>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtns");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 </script>
 
