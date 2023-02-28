@@ -1,0 +1,319 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  line-height: 1.8;
+}
+
+table.a {
+  border-collapse: collapse;
+  width: auto;
+  line-height: 1.8;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(even).a {
+  background-color: #ffffff;
+}
+
+.button3 {
+  background-color: #004a7f;
+  -webkit-border-radius: 0px;
+  border-radius: 150px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 0px;
+  padding: 0px 0px;
+  margin: 0px !important;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing2 1500ms infinite;
+  -moz-animation: glowing2 1500ms infinite;
+  -o-animation: glowing2 1500ms infinite;
+  animation: glowing2 1500ms infinite;
+}
+
+.button3:hover {
+  color: yellow;
+}
+
+@-webkit-keyframes glowing2 {
+  0% {
+    background-color: #00b200;
+    -webkit-box-shadow: 0 0 3px #00b200;
+  }
+
+  50% {
+    background-color: #00ff00;
+    -webkit-box-shadow: 0 0 40px #00ff00;
+  }
+
+  100% {
+    background-color: #00b200;
+    -webkit-box-shadow: 0 0 3px #00b200;
+  }
+}
+
+@-moz-keyframes glowing2 {
+  0% {
+    background-color: #00b200;
+    -moz-box-shadow: 0 0 3px #00b200;
+  }
+
+  50% {
+    background-color: #00ff00;
+    -moz-box-shadow: 0 0 40px #00ff00;
+  }
+
+  100% {
+    background-color: #00b200;
+    -moz-box-shadow: 0 0 3px #00b200;
+  }
+}
+
+@-o-keyframes glowing2 {
+  0% {
+    background-color: #00b200;
+    box-shadow: 0 0 3px #00b200;
+  }
+
+  50% {
+    background-color: #00ff00;
+    box-shadow: 0 0 40px #00ff00;
+  }
+
+  100% {
+    background-color: #00b200;
+    box-shadow: 0 0 3px #00b200;
+  }
+}
+
+@keyframes glowing2 {
+  0% {
+    background-color: #00b200;
+    box-shadow: 0 0 3px #00b200;
+  }
+
+  50% {
+    background-color: #00ff00;
+    box-shadow: 0 0 40px #00ff00;
+  }
+
+  100% {
+    background-color: #00b200;
+    box-shadow: 0 0 3px #00b200;
+  }
+}
+
+li.e {
+  float: left;
+  margin: 5 20px;
+}
+
+ul {
+  list-style: disc;
+}
+
+li.a {
+  float: none;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontents {
+  display: none;
+  padding: 12px 24px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {
+  color: red;
+}
+
+a:link.a,
+a:visited.a {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover.a,
+a:active.a {
+  background-color: green;
+  color: white;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column-notice {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-notice {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row-notice:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column-notice {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+/* Style the counter cards */
+.card-notice {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+.btn {
+  background-color: #990000;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  float: right;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: red;
+}
+
+#myBtns {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #990000;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtns:hover {
+  background-color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+.notice-result {
+  background-color: yellow;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.scroll-box {
+  height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.vl {
+    border-left: 1px solid gray;
+    height: 150px;
+  }
