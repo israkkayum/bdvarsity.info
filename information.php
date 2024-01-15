@@ -5,7 +5,7 @@
 	$Subject = $_POST['Subject'];
 	$Message = $_POST['Message'];
 	
-	$conn = new mysqli('sql212.epizy.com', 'epiz_26594656','6C0Ay8Z78cFE2','epiz_26594656_message');
+	$conn = new mysqli('server223.web-hosting.com', 'bdvadjrm_cu842', 'WJXs;98{kcd,','bdvadjrm_send-messages');
 	if($conn->connect_error){
 		die('Connection Failed :' .$conn->connect_error);
 	} else{

@@ -279,3 +279,7 @@ p {
 .text-danger {
   color: red;
 }
+
+.text-info {
+  color: steelblue;
+}

@@ -119,6 +119,14 @@ td.a {
   padding: 8px;
 }
 
+th {
+  text-align: center;
+}
+
+td.center {
+  text-align: center;
+}
+
 tr:nth-child(even) {
   background-color: #dddddd;
 }
